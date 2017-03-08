@@ -28,6 +28,7 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
    this.cvc = cvc;
  }
  NewProduct.prototype.calculatePrice = function(){
+   $("#purchase").show();
    $(".emptyCart").hide();
    $(".cartItems").append("<li class='orderStyle'>" + this.title + " $" + this.price + "</li>");
    return total += this.price
@@ -35,10 +36,11 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
  }
  NewProduct.prototype.tax = function(){
     taxCalc = total * .096;
-   $("#tax").text("Tax: $" + taxCalc);
+    taxDisplay = taxCalc.toFixed(2);
+   $("#tax").text("Tax: $" + taxDisplay);
  }
  NewProduct.prototype.shipping = function(){
-    if(total< 25){
+    if((total<= 25)&&(total>=1)){
      $("#shippingTotal").text("Shipping: $3.25")
      ship = 3.25;
    }else if ((total >25) && (total<51)){
@@ -118,7 +120,7 @@ $(document).ready(function() {
     $(".cartItems").hide();
   });
 
-  //womanShirtOne.calculatePrice();
+  womanShirtOne.calculatePrice();
   manShirtOne.calculatePrice();
   womanShirtOne.shipping();
   manShirtOne.shipping();
@@ -126,7 +128,8 @@ $(document).ready(function() {
   manShirtOne.tax();
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
-  $("#grandTotal").text("Total: $" + totalWithTax);
+  var totalFix = totalWithTax.toFixed(2);
+  $("#grandTotal").text("Total: $" + totalFix);
 
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
@@ -134,6 +137,13 @@ $(document).ready(function() {
     var discountFix = discount.toFixed(2);
     var newPrice = totalWithTax - discountFix;
     $("#discountTotal").text("Total with E-mail Discount: $" + newPrice);
-    console.log(discountFix);
-  })
+  });
+  $("#thanks").click(function(event){
+    event.preventDefault();
+    $(".userConformation").hide();
+    $("#priceCalculator").hide();
+    $("#purchase").hide();
+    $(".thankYou").show();
+
+  });
 });

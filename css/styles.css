@@ -111,11 +111,7 @@ h1 {
   float:right;
   margin-right: 20px;
 }
-.license{
-  text-align: center;
-  margin-top: 100%;
-  margin-bottom: 50px;
-}
+
 #priceCalculator{
   background: white;
   margin-right: 20px;
@@ -158,6 +154,7 @@ h1 {
 }
 #purchase{
   margin:0 40%;
+  display:none;
 }
 .cartItems{
   text-align: center;
@@ -171,4 +168,8 @@ h1 {
 .priceSheet{
   margin: 15px;
   font-weight: bold;
+}
+.thankYou{
+  display: none;
+  text-align: center;
 }
