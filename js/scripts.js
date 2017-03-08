@@ -1,15 +1,21 @@
 //backend
- function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes){
-   this.title = title;
-   this.category = category;
-   this.description = description;
-   this.price = price;
-   this.images = images;
-   this.thumbnails = thumbnails;
-   this.swatches = swatches;
-   this.colors = colors;
-   this.sizes = sizes;
- }
+
+var total = 0;
+var ship = 0;
+var taxCalc = 0;
+var cartCounter = 0;
+
+function NewProduct(title, category, description, price, images){
+ this.title = title;
+ this.category = category;
+ this.description = description;
+ this.price = price;
+ this.images = images;
+ this.thumbnails = thumbnails;
+ this.swatches = swatches;
+ this.colors = colors;
+ this.sizes = sizes;
+}
 
 var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"]);
 
@@ -56,7 +62,6 @@ NewProduct.prototype.productdetail = function(){
     $("#selSize").append("<option " + "class=" + '"product-color">' + this.sizes[i] + "</option>");
   };
 }
-//recreate shirtInfo
 
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
    this.names = names;
@@ -72,6 +77,32 @@ NewProduct.prototype.productdetail = function(){
    this.cardNumber = cardNumber;
    this.expire = expire;
    this.cvc = cvc;
+ }
+
+ NewProduct.prototype.calculatePrice = function(){
+   $("#purchase").show();
+   $(".emptyCart").hide();
+   cartCounter = cartCounter + 1;
+   $(".cartItems").append("<li class='orderStyle'>" + this.title + " $" + this.price + "</li>");
+   $("#cartCount").text(cartCounter);
+   return total += this.price
+ }
+ NewProduct.prototype.tax = function(){
+    taxCalc = total * .096;
+    taxDisplay = taxCalc.toFixed(2);
+   $("#tax").text("Tax: $" + taxDisplay);
+ }
+ NewProduct.prototype.shipping = function(){
+    if((total<= 25)&&(total>=1)){
+     $("#shippingTotal").text("Shipping: $3.25")
+     ship = 3.25;
+   }else if ((total >25) && (total<51)){
+     $("#shippingTotal").text("Shipping: $5.50")
+     ship = 5.5;
+   }else{
+     $("#shippingTotal").text("Shipping: Free")
+     ship =  0;
+   };
  }
 
 CustomerInfo.prototype.makethingsappear = function(){
@@ -271,5 +302,33 @@ $("#swatch5").hover(function(event) {
     $("#emailDiscount").hide();
     $(".emptyCart").hide();
     $("#purchase").hide();
+    $(".cartItems").hide();
+  });
+
+  womanShirtOne.calculatePrice();
+  manShirtOne.calculatePrice();
+  womanShirtOne.shipping();
+  manShirtOne.shipping();
+  womanShirtOne.tax();
+  manShirtOne.tax();
+  $("#itemTotal").append(total);
+  var totalWithTax = total + ship + taxCalc;
+  var totalFix = totalWithTax.toFixed(2);
+  $("#grandTotal").text("Total: $" + totalFix);
+  console.log(cartCounter);
+  $("#emailDiscount").submit(function(event){
+    event.preventDefault();
+    var discount = (totalWithTax * .2);
+    var discountFix = discount.toFixed(2);
+    var newPrice = totalWithTax - discountFix;
+    $("#discountTotal").text("Total with E-mail Discount: $" + newPrice);
+  });
+  $("#thanks").click(function(event){
+    event.preventDefault();
+    $(".userConformation").hide();
+    $("#priceCalculator").hide();
+    $("#purchase").hide();
+    $(".thankYou").show();
+
   });
 });
