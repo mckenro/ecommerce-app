@@ -19,18 +19,6 @@ function NewProduct(title, category, description, price, images, thumbnails, swa
 
 var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"]);
 
-// NewProduct.prototype.thumbnailLoop = function(){
-//   for (var i = 0; i< this.thumbnails.length; i++) {
-//     $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
-//   };
-// };
-
-// NewProduct.prototype.productdetail = function(){
-//   for (var i = 0; i< this.thumbnails.length; i++) {
-//     $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
-//   };
-// }
-
 NewProduct.prototype.productdetail = function(){
 
   //loop to add all product thumbnail images
@@ -306,11 +294,11 @@ $("#swatch5").hover(function(event) {
   });
 
   womanShirtOne.calculatePrice();
-  manShirtOne.calculatePrice();
+
   womanShirtOne.shipping();
-  manShirtOne.shipping();
+
   womanShirtOne.tax();
-  manShirtOne.tax();
+
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
