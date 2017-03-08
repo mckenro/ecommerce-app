@@ -10,37 +10,49 @@ body {
 }
 
 /*The browbar is under the title and over the pictures on the homepage*/
+#titleBar {
+
+}
+#browBar {
+  background-color: black;
+}
 #browBar, #titleBar{
   width: 100%;
   text-align:center;
-
-  margin-bottom: 30px;
+  padding-bottom: 1px;
 }
 /*This is for text on photos on the homepage*/
-#womanTitle, #manTitle, #kidTitle{
+#womanTitle, #manTitle, #kidTitle, #everyoneTitle{
   position: absolute;
   margin: 30px 125px;
   font-size: 120px;
   text-shadow: 2px 2px black;
 }
 /*This is for text on photos on the homepage*/
-#women, #men, #kids {
+#women, #men, #kids, #everyone, #browText {
   color: white;
 }
 /* This is the top title text on homepage*/
 .display-1 {
   font-size: 120px;
 }
-
-img {
+/* These next three only affect homepage images*/
+.imgHome img{
   width:100%;
 }
 a {
   color: white;
 }
-
 a hover {
   color: blue;
+}
+
+.shop{
+  padding: 00px;
+  border:2px solid black;
+  padding:20px;
+  margin:10px;/*margin only works on row as whole*/
+
 }
 /*body, html {
 margin: 0 -10px 0 -10px;
