@@ -3,14 +3,10 @@
   margin-bottom: 60px;
   background: none;
 }
-.container{
-
-}
 
 body {
   padding-top: 50px;
   background: rgb(248,248,248);
-  text-align: center;
 }
 
 /*The browbar is under the title and over the pictures on the homepage*/
@@ -81,7 +77,10 @@ h1 {
   height: 200px;
   background-color: green;
 }
-
+#cartCount{
+  background-color: red;
+  color: white;
+}
 /*Product Thumbnail Gallery */
 #product1 {
   background: url(../img/dolman_sample.png) no-repeat center center fixed;
@@ -121,21 +120,17 @@ h1 {
 .emptyCart{
   text-align: center;
   margin: 50px 150px;
-  float:right;
 }
 #cartSymbol{
   width:40px;
   float:right;
   margin-right: 20px;
 }
-.license{
-  text-align: center;
-  margin-top: 100%;
-  margin-bottom: 50px;
-}
+
 #priceCalculator{
   background: white;
   margin-right: 20px;
+  margin-left: 10px;
   height:400px;
   width:240px;
   position:fixed;
@@ -174,4 +169,22 @@ h1 {
 }
 #purchase{
   margin:0 40%;
+  display:none;
+}
+.cartItems{
+  text-align: center;
+}
+.orderStyle{
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 30px;
+  margin-left: 60px;
+}
+.priceSheet{
+  margin: 15px;
+  font-weight: bold;
+}
+.thankYou{
+  display: none;
+  text-align: center;
 }

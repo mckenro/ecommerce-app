@@ -1,4 +1,8 @@
 //backend
+var total = 0;
+var ship = 0;
+var taxCalc = 0;
+var cartCounter = 0;
  function NewProduct(title, category, description, price, images){
    this.title = title;
    this.category = category;
@@ -6,7 +10,8 @@
    this.price = price;
    this.images = [];
  }
-
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 20, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
    this.names = names;
    this.address = address;
@@ -21,6 +26,31 @@
    this.cardNumber = cardNumber;
    this.expire = expire;
    this.cvc = cvc;
+ }
+ NewProduct.prototype.calculatePrice = function(){
+   $("#purchase").show();
+   $(".emptyCart").hide();
+   cartCounter = cartCounter + 1;
+   $(".cartItems").append("<li class='orderStyle'>" + this.title + " $" + this.price + "</li>");
+   $("#cartCount").text(cartCounter);
+   return total += this.price
+ }
+ NewProduct.prototype.tax = function(){
+    taxCalc = total * .096;
+    taxDisplay = taxCalc.toFixed(2);
+   $("#tax").text("Tax: $" + taxDisplay);
+ }
+ NewProduct.prototype.shipping = function(){
+    if((total<= 25)&&(total>=1)){
+     $("#shippingTotal").text("Shipping: $3.25")
+     ship = 3.25;
+   }else if ((total >25) && (total<51)){
+     $("#shippingTotal").text("Shipping: $5.50")
+     ship = 5.5;
+   }else{
+     $("#shippingTotal").text("Shipping: Free")
+     ship =  0;
+   };
  }
 CustomerInfo.prototype.makethingsappear = function(){
   $("#userInput").hide();
@@ -88,5 +118,33 @@ $(document).ready(function() {
     $("#emailDiscount").hide();
     $(".emptyCart").hide();
     $("#purchase").hide();
+    $(".cartItems").hide();
+  });
+
+  womanShirtOne.calculatePrice();
+  manShirtOne.calculatePrice();
+  womanShirtOne.shipping();
+  manShirtOne.shipping();
+  womanShirtOne.tax();
+  manShirtOne.tax();
+  $("#itemTotal").append(total);
+  var totalWithTax = total + ship + taxCalc;
+  var totalFix = totalWithTax.toFixed(2);
+  $("#grandTotal").text("Total: $" + totalFix);
+  console.log(cartCounter);
+  $("#emailDiscount").submit(function(event){
+    event.preventDefault();
+    var discount = (totalWithTax * .2);
+    var discountFix = discount.toFixed(2);
+    var newPrice = totalWithTax - discountFix;
+    $("#discountTotal").text("Total with E-mail Discount: $" + newPrice);
+  });
+  $("#thanks").click(function(event){
+    event.preventDefault();
+    $(".userConformation").hide();
+    $("#priceCalculator").hide();
+    $("#purchase").hide();
+    $(".thankYou").show();
+
   });
 });
