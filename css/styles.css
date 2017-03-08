@@ -118,10 +118,11 @@ h1 {
 }
 .license{
   text-align: center;
-  margin-top: 400px;
+  margin-top: 100%;
+  margin-bottom: 50px;
 }
 #priceCalculator{
-  background: grey;
+  background: white;
   margin-right: 20px;
   height:400px;
   width:240px;
@@ -129,11 +130,13 @@ h1 {
   border: 2px solid black;
 }
 #priceCalculator h2{
-  background-color: lightyellow;
-
+  background-color: lightblue;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10px 25px;
 }
 #priceCalculator p{
-  margin: 5px;
+  margin:30px 5px;
 }
 #emailDiscount h3{
   color: red;

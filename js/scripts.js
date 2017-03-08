@@ -23,9 +23,8 @@
    this.cvc = cvc;
  }
 CustomerInfo.prototype.makethingsappear = function(){
-  $("#priceCalculator").hide();
   $("#userInput").hide();
-  $("#userConformation").show();
+  $(".userConformation").show();
   $("#payInfo").append("<li>" + "Name: " + this.names + "</li>");
   $("#payInfo").append("<li>" + "Address: "+ this.address + " " + this.city + ", " + this.state + " " + this.zip + "</li>");
   $("#payInfo").append("<li>" + "Phone: " + this.phone + "</li>");
