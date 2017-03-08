@@ -5,7 +5,7 @@ var ship = 0;
 var taxCalc = 0;
 var cartCounter = 0;
 
-function NewProduct(title, category, description, price, images){
+function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes){
  this.title = title;
  this.category = category;
  this.description = description;
