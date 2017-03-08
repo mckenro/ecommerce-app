@@ -2,7 +2,7 @@
 var total = 0;
 var ship = 0;
 var taxCalc = 0;
-
+var cartCounter = 0;
  function NewProduct(title, category, description, price, images){
    this.title = title;
    this.category = category;
@@ -30,9 +30,10 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
  NewProduct.prototype.calculatePrice = function(){
    $("#purchase").show();
    $(".emptyCart").hide();
+   cartCounter = cartCounter + 1;
    $(".cartItems").append("<li class='orderStyle'>" + this.title + " $" + this.price + "</li>");
+   $("#cartCount").text(cartCounter);
    return total += this.price
-   console.log(total);
  }
  NewProduct.prototype.tax = function(){
     taxCalc = total * .096;
@@ -130,7 +131,7 @@ $(document).ready(function() {
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
   $("#grandTotal").text("Total: $" + totalFix);
-
+  console.log(cartCounter);
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
     var discount = (totalWithTax * .2);
