@@ -3,14 +3,10 @@
   margin-bottom: 60px;
   background: none;
 }
-.container{
-  background:black;
-}
 
 body {
   padding-top: 50px;
   background: rgb(248,248,248);
-  text-align: center;
 }
 
 /*The browbar is under the title and over the pictures on the homepage*/
@@ -109,7 +105,6 @@ h1 {
 .emptyCart{
   text-align: center;
   margin: 50px 150px;
-  float:right;
 }
 #cartSymbol{
   width:40px;
@@ -124,6 +119,7 @@ h1 {
 #priceCalculator{
   background: white;
   margin-right: 20px;
+  margin-left: 10px;
   height:400px;
   width:240px;
   position:fixed;
@@ -162,4 +158,13 @@ h1 {
 }
 #purchase{
   margin:0 40%;
+}
+.cartItems{
+  text-align: center;
+}
+.orderStyle{
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 30px;
+  margin-left: 60px;
 }

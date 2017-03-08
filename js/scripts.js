@@ -1,4 +1,8 @@
 //backend
+var total = 0;
+var ship = 0;
+var taxCalc = 0;
+
  function NewProduct(title, category, description, price, images){
    this.title = title;
    this.category = category;
@@ -6,7 +10,8 @@
    this.price = price;
    this.images = [];
  }
-
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 20, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
    this.names = names;
    this.address = address;
@@ -21,6 +26,28 @@
    this.cardNumber = cardNumber;
    this.expire = expire;
    this.cvc = cvc;
+ }
+ NewProduct.prototype.calculatePrice = function(){
+   $(".emptyCart").hide();
+   $(".cartItems").append("<li class='orderStyle'>" + this.title + " $" + this.price + "</li>");
+   return total += this.price
+   console.log(total);
+ }
+ NewProduct.prototype.tax = function(){
+    taxCalc = total * .096;
+   $("#tax").text("Tax: $" + taxCalc);
+ }
+ NewProduct.prototype.shipping = function(){
+    if(total< 25){
+     $("#shippingTotal").text("Estimated Shipping: $3.25")
+     ship = 3.25;
+   }else if ((total >25) && (total<51)){
+     $("#shippingTotal").text("Estimated Shipping: $5.50")
+     ship = 5.5;
+   }else{
+     $("#shippingTotal").text("Estimated Shipping: Free")
+     ship =  0;
+   };
  }
 CustomerInfo.prototype.makethingsappear = function(){
   $("#userInput").hide();
@@ -88,5 +115,22 @@ $(document).ready(function() {
     $("#emailDiscount").hide();
     $(".emptyCart").hide();
     $("#purchase").hide();
+    $(".cartItems").hide();
   });
+
+  womanShirtOne.calculatePrice();
+  manShirtOne.calculatePrice();
+  womanShirtOne.shipping();
+  manShirtOne.shipping();
+  womanShirtOne.tax();
+  manShirtOne.tax();
+  $("#itemTotal").append(total);
+  var totalWithTax = total + ship + taxCalc;
+  $("#grandTotal").text("Total: $" + totalWithTax);
+
+  $("#emailDiscount").submit(function(event){
+    event.preventDefault();
+    var discount = parseFloat(totalWithTax * .2);
+    console.log(discount);
+  })
 });
