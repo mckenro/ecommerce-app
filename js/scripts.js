@@ -39,13 +39,13 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
  }
  NewProduct.prototype.shipping = function(){
     if(total< 25){
-     $("#shippingTotal").text("Estimated Shipping: $3.25")
+     $("#shippingTotal").text("Shipping: $3.25")
      ship = 3.25;
    }else if ((total >25) && (total<51)){
-     $("#shippingTotal").text("Estimated Shipping: $5.50")
+     $("#shippingTotal").text("Shipping: $5.50")
      ship = 5.5;
    }else{
-     $("#shippingTotal").text("Estimated Shipping: Free")
+     $("#shippingTotal").text("Shipping: Free")
      ship =  0;
    };
  }
@@ -118,7 +118,7 @@ $(document).ready(function() {
     $(".cartItems").hide();
   });
 
-  womanShirtOne.calculatePrice();
+  //womanShirtOne.calculatePrice();
   manShirtOne.calculatePrice();
   womanShirtOne.shipping();
   manShirtOne.shipping();
@@ -130,7 +130,10 @@ $(document).ready(function() {
 
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
-    var discount = parseFloat(totalWithTax * .2);
-    console.log(discount);
+    var discount = (totalWithTax * .2);
+    var discountFix = discount.toFixed(2);
+    var newPrice = totalWithTax - discountFix;
+    $("#discountTotal").text("Total with E-mail Discount: $" + newPrice);
+    console.log(discountFix);
   })
 });

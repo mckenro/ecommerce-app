@@ -41,12 +41,14 @@
       <h3>Shipping Info:</h3>
       <ul id="shipInfo"></ul>
     </div>
+    <button type="submit">Finish order</button>
+    <div class="thankYou"></div>
       <!--emailDiscount-->
       <form id="emailDiscount">
         <h3>Sign up for our mailing list and receive 20% off your first order!</h3>
         <div class="form-group">
           <label for="email"></label>
-          <input id="email" class="form-control" type="email" placeholder="Email">
+          <input id="email" class="form-control" type="email" placeholder="Email" required>
         </div>
         <button type="submit">Add E-mail</button>
       </form>
@@ -67,11 +69,12 @@
               <div class="table-header">
                 <h2>Order Summary</h2>
               </div>
-              <div class="table-body">
-                <p id="itemTotal">Items Summary: $</p>
-                <p id="shippingTotal">Estimated Shipping: $</p>
+              <div class="priceSheet">
+                <p id="itemTotal">Items Total: $</p>
+                <p id="shippingTotal">Shipping: $</p>
                 <p id="tax">Tax: $</p>
                 <p id="grandTotal"></p>
+                <p id="discountTotal"></p>
               </div>
             </div>
           </table>
@@ -88,27 +91,27 @@
         <div id="billingInfo">
           <div class="form-group">
             <label for="name"></label>
-            <input id="name" class="form-control" type="text" placeholder="Name on Card">
+            <input id="name" class="form-control" type="text" placeholder="Name on Card" required>
           </div>
             <div class="form-group">
               <label for="address"></label>
-              <input id="address" class="form-control" type="text" placeholder="Address">
+              <input id="address" class="form-control" type="text" placeholder="Address" required>
             </div>
             <div class="form-group">
               <label for="city"></label>
-              <input id="city" class="form-control" type="text" placeholder="City">
+              <input id="city" class="form-control" type="text" placeholder="City" required>
             </div>
             <div class="form-group">
               <label for="state"></label>
-              <input id="state" class="form-control" type="text" placeholder="State">
+              <input id="state" class="form-control" type="text" placeholder="State" required>
             </div>
             <div class="form-group">
               <label for="zip"></label>
-              <input id="zip" class="form-control" type="text" placeholder="Zip Code">
+              <input id="zip" class="form-control" type="text" placeholder="Zip Code" required>
             </div>
             <div class="form-group">
               <label for="phone"></label>
-              <input id="phone" class="form-control" type="text" placeholder="Phone Number">
+              <input id="phone" class="form-control" type="text" placeholder="Phone Number" required>
             </div>
           </div>
         </div>
@@ -121,19 +124,19 @@
           <div id="addressInfo">
               <div class="form-group">
                 <label for="shipAddress"></label>
-                <input id="shipAddress" class="form-control" type="text" placeholder="Address">
+                <input id="shipAddress" class="form-control" type="text" placeholder="Address" required>
               </div>
               <div class="form-group">
                 <label for="shipCity"></label>
-                <input id="shipCity" class="form-control" type="text" placeholder="City">
+                <input id="shipCity" class="form-control" type="text" placeholder="City" required>
               </div>
               <div class="form-group">
                 <label for="shipState"></label>
-                <input id="shipState" class="form-control" type="text" placeholder="State">
+                <input id="shipState" class="form-control" type="text" placeholder="State" required>
               </div>
               <div class="form-group">
                 <label for="shipZip"></label>
-                <input id="shipZip" class="form-control" type="text" placeholder="Zip Code">
+                <input id="shipZip" class="form-control" type="text" placeholder="Zip Code" required>
               </div>
             </div>
           </div>
@@ -146,15 +149,15 @@
             <div id="creditCardInfo">
               <div class="form-group">
                 <label for="cardNumber"></label>
-                <input id="cardNumber" class="form-control" type="text" placeholder="Credit Card Number">
+                <input id="cardNumber" class="form-control" type="text" placeholder="Credit Card Number" required>
               </div>
                 <div class="form-group">
                   <label for="expire"></label>
-                  <input id="expire" class="form-control" type="text" placeholder="Expiration Date">
+                  <input id="expire" class="form-control" type="text" placeholder="Expiration Date" required>
                 </div>
                 <div class="form-group">
                   <label for="cvc"></label>
-                  <input id="cvc" class="form-control" type="text" placeholder="CVC">
+                  <input id="cvc" class="form-control" type="text" placeholder="CVC" required>
                 </div>
                 <button type="submit">Confirm Purchase</button>
               </div>

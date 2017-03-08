@@ -168,3 +168,7 @@ h1 {
   font-size: 30px;
   margin-left: 60px;
 }
+.priceSheet{
+  margin: 15px;
+  font-weight: bold;
+}
