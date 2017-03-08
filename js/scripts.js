@@ -7,6 +7,30 @@
    this.images = [];
  }
 
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+
+NewProduct.prototype.thumbnailLoop = function(){
+  for (var i = 0; i< this.thumbnails.length; i++) {
+    $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  };
+};
+
+// NewProduct.prototype.productdetail = function(){
+//   for (var i = 0; i< this.thumbnails.length; i++) {
+//     $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+//   };
+// }
+
+NewProduct.prototype.productdetail = function(){
+  for (var i = 0; i< this.thumbnails.length; i++) {
+    var thumbLoop = $("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  };
+
+
+
+}
+//recreate shirtInfo
+
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
    this.names = names;
    this.address = address;
@@ -22,6 +46,7 @@
    this.expire = expire;
    this.cvc = cvc;
  }
+
 CustomerInfo.prototype.makethingsappear = function(){
   $("#userInput").hide();
   $(".userConformation").show();

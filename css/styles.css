@@ -3,14 +3,10 @@
   margin-bottom: 60px;
   background: none;
 }
-.container{
-  background:black;
-}
 
 body {
   padding-top: 50px;
   background: rgb(248,248,248);
-  text-align: center;
 }
 
 /*The browbar is under the title and over the pictures on the homepage*/
@@ -36,9 +32,6 @@ body {
   font-size: 120px;
 }
 
-img {
-  width:100%;
-}
 a {
   color: white;
 }
@@ -72,7 +65,8 @@ h1 {
 
 /*Product Thumbnail Gallery */
 #product1 {
-  background: url(../img/dolman_sample.png) no-repeat center center fixed;
+  /*background: url(../img/dolman_sample.png) no-repeat center center fixed;*/
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
   /*margin-right: -80px;*/
@@ -100,6 +94,7 @@ h1 {
   display: none;
 }
 
+/* cart styling */
 #emailDiscount{
   margin: 10px 30%;
 }
