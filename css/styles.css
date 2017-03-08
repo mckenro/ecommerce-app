@@ -6,7 +6,7 @@
 
 body {
   padding-top: 50px;
-  background: rgb(248,248,248);
+  background: rgb(248, 248, 248);
 }
 
 /*The browbar is under the title and over the pictures on the homepage*/
@@ -39,13 +39,8 @@ a {
 a hover {
   color: blue;
 }
-/*body, html {
-margin: 0 -10px 0 -10px;
-padding: 0;
-color: #37474F;
-}*/
 
-.thumb, .thumb1, .thumb2, .thumb3, .thumb4 {
+.thumb {
   padding-left:30px;
   margin-top: 20px;
 }
@@ -64,35 +59,57 @@ h1 {
 }
 
 /*Product Thumbnail Gallery */
-#product1 {
-  /*background: url(../img/dolman_sample.png) no-repeat center center fixed;*/
+#product0 {
   background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  /*margin-right: -80px;*/
+  height: 100vh;
+  width: 100%;
+}
+
+#product1 {
+  background: no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
   height: 100vh;
   width: 100%;
 }
 
 #product2 {
-  background: url(../img/dolman_sample_blue.png) no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  /*margin-right: -80px;*/
   height: 100vh;
   width: 100%;
   display: none;
 }
 
 #product3 {
-  background: url(../img/dolman_sample_red.png) no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  /*margin-right: -80px;*/
   height: 100vh;
   width: 100%;
   display: none;
 }
+
+#product4 {
+  background-size: contain;
+  background-position: left top;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+#product5 {
+  background-size: contain;
+  background-position: left top;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+/*#thumbnail-area {
+  background: transparent;
+}*/
 
 /* cart styling */
 #emailDiscount{

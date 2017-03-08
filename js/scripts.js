@@ -1,19 +1,21 @@
 //backend
- function NewProduct(title, category, description, price, images){
+ function NewProduct(title, category, description, price, images, thumbnails, swatches){
    this.title = title;
    this.category = category;
    this.description = description;
    this.price = price;
-   this.images = [];
+   this.images = images;
+   this.thumbnails = thumbnails;
+   this.swatches = swatches;
  }
 
-var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.png", "img/dolman_sample_blue_thumb.png", "img/dolman_sample_red_thumb.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
 
-NewProduct.prototype.thumbnailLoop = function(){
-  for (var i = 0; i< this.thumbnails.length; i++) {
-    $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
-  };
-};
+// NewProduct.prototype.thumbnailLoop = function(){
+//   for (var i = 0; i< this.thumbnails.length; i++) {
+//     $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+//   };
+// };
 
 // NewProduct.prototype.productdetail = function(){
 //   for (var i = 0; i< this.thumbnails.length; i++) {
@@ -22,10 +24,20 @@ NewProduct.prototype.thumbnailLoop = function(){
 // }
 
 NewProduct.prototype.productdetail = function(){
-  for (var i = 0; i< this.thumbnails.length; i++) {
-    var thumbLoop = $("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  //loop to add all product images
+  for (var i = 0; i< this.images.length; i++) {
+    $("#product-image-large").append("<div id='product" + i + "' style='background-image:url(" + this.images[i] + ");'>");
   };
 
+  //loop to add all product thumbnail images
+  for (var i = 0; i< this.thumbnails.length; i++) {
+    $("#thumbnail-area").append("<img class=" + "'thumb" + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  };
+
+  //loop to add all product color swatch images
+  for (var i = 0; i< this.thumbnails.length; i++) {
+    var swatchesLoop = $("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  };
 
 
 }
@@ -60,6 +72,8 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
+  womanShirtOne.productdetail();
+
   $(".thumb1").click(function(event) {
     event.preventDefault();
     $("#product2").hide();
