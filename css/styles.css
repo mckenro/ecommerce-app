@@ -40,9 +40,17 @@ a hover {
   color: blue;
 }
 
-.thumb {
-  padding-left:30px;
-  margin-top: 20px;
+#swatch0, #swatch1, #swatch2, #swatch3, #swatch4, #swatch5 {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.thumb0, .thumb1, .thumb2, .thumb3, .thumb4, .thumb5 {
+  margin-left:12px;
+  margin-top: 12px;
+  border: 2px solid white;
+  background: white;
 }
 
 img:first {
@@ -73,9 +81,11 @@ h1 {
   background-position: left top;
   height: 100vh;
   width: 100%;
+  display: none;
 }
 
 #product2 {
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
   height: 100vh;
@@ -84,6 +94,7 @@ h1 {
 }
 
 #product3 {
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
   height: 100vh;
@@ -92,6 +103,7 @@ h1 {
 }
 
 #product4 {
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
   height: 100vh;
@@ -100,6 +112,7 @@ h1 {
 }
 
 #product5 {
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
   height: 100vh;
@@ -107,9 +120,13 @@ h1 {
   display: none;
 }
 
-/*#thumbnail-area {
-  background: transparent;
-}*/
+#thumbnail-area {
+  position: absolute;
+}
+
+#thumbnail-area img {
+
+}
 
 /* cart styling */
 #emailDiscount{

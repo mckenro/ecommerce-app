@@ -1,5 +1,5 @@
 //backend
- function NewProduct(title, category, description, price, images, thumbnails, swatches){
+ function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes){
    this.title = title;
    this.category = category;
    this.description = description;
@@ -7,9 +7,11 @@
    this.images = images;
    this.thumbnails = thumbnails;
    this.swatches = swatches;
+   this.colors = colors;
+   this.sizes = sizes;
  }
 
-var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.png", "img/dolman_sample_blue_thumb.png", "img/dolman_sample_red_thumb.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"]);
 
 // NewProduct.prototype.thumbnailLoop = function(){
 //   for (var i = 0; i< this.thumbnails.length; i++) {
@@ -24,22 +26,35 @@ var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin c
 // }
 
 NewProduct.prototype.productdetail = function(){
+
+  //loop to add all product thumbnail images
+  for (var i = 0; i< this.thumbnails.length; i++) {
+    $("#thumbnail-area").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  };
+
   //loop to add all product images
   for (var i = 0; i< this.images.length; i++) {
     $("#product-image-large").append("<div id='product" + i + "' style='background-image:url(" + this.images[i] + ");'>");
   };
 
-  //loop to add all product thumbnail images
-  for (var i = 0; i< this.thumbnails.length; i++) {
-    $("#thumbnail-area").append("<img class=" + "'thumb" + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
-  };
-
   //loop to add all product color swatch images
-  for (var i = 0; i< this.thumbnails.length; i++) {
-    var swatchesLoop = $("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  for (var i = 0; i< this.swatches.length; i++) {
+    $("#swatch-area").append("<img id=" + "'swatch" + i + "'" + " " + "src=" + this.swatches[i] + "></img>");
   };
 
+  $("h1.product-title").append(this.title);
 
+  $("h2.product-price").append("$" + this.price.toFixed(2));
+
+  $("p.product-description").append(this.description);
+
+  for (var i = 0; i< this.colors.length; i++) {
+    $("#selColor").append("<option " + "class=" + '"product-color">' + this.colors[i] + "</option>");
+  };
+
+  for (var i = 0; i< this.sizes.length; i++) {
+    $("#selSize").append("<option " + "class=" + '"product-color">' + this.sizes[i] + "</option>");
+  };
 }
 //recreate shirtInfo
 
@@ -73,12 +88,22 @@ CustomerInfo.prototype.makethingsappear = function(){
 //product detail page thumbnail gallery
 $(document).ready(function() {
   womanShirtOne.productdetail();
-
+  $(".thumb0").click(function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product0").show();
+  });
   $(".thumb1").click(function(event) {
     event.preventDefault();
     $("#product2").hide();
     $("#product3").hide();
     $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
     $("#product1").show();
   });
   $(".thumb2").click(function(event) {
@@ -86,6 +111,8 @@ $(document).ready(function() {
     $("#product1").hide();
     $("#product3").hide();
     $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
     $("#product2").show();
   });
   $(".thumb3").click(function(event) {
@@ -93,6 +120,8 @@ $(document).ready(function() {
     $("#product1").hide();
     $("#product2").hide();
     $("#product4").hide();
+    $("#product5").hide();
+    $("#product6").hide();
     $("#product3").show();
   });
   $(".thumb4").click(function(event) {
@@ -100,8 +129,123 @@ $(document).ready(function() {
     $("#product1").hide();
     $("#product2").hide();
     $("#product3").hide();
+    $("#product5").hide();
+    $("#product0").hide();
     $("#product4").show();
   });
+  $(".thumb5").click(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product0").hide();
+    $("#product5").show();
+  });
+  //swatch hover events
+$("#swatch0").hover(function(event) {
+  event.preventDefault();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+  $("#product0").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+  $("#product0").show();
+});
+$("#swatch1").hover(function(event) {
+  event.preventDefault();
+  $("#product0").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product2").hide();
+  $("#product1").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product2").hide();
+  $("#product1").hide();
+});
+$("#swatch2").hover(function(event) {
+  event.preventDefault();
+  $("#product1").hide();
+  $("#product2").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product0").hide();
+  $("#product2").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product2").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+  $("#product2").hide();
+});
+$("#swatch3").hover(function(event) {
+  event.preventDefault();
+  $("#product1").hide();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product5").hide();
+  $("#product0").hide();
+  $("#product3").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+});
+$("#swatch4").hover(function(event) {
+  event.preventDefault();
+  $("#product1").hide();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product5").hide();
+  $("#product0").hide();
+  $("#product4").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product3").hide();
+  $("#product1").hide();
+  $("#product5").hide();
+  $("#product2").hide();
+  $("#product4").hide();
+});
+$("#swatch5").hover(function(event) {
+  event.preventDefault();
+  $("#product0").hide();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product1").hide();
+  $("#product5").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product1").hide();
+  $("#product6").hide();
+  $("#product5").hide();
+});
+
   $("#userInput").submit(function(event){
     event.preventDefault();
     var name = $("#name").val();
