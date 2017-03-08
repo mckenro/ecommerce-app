@@ -35,6 +35,11 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
    $("#cartCount").text(cartCounter);
    return total += this.price
  }
+
+ NewProduct.prototype.shopInfo = function() {
+ $(".title").append( this.title + " $" + this.price);
+ }
+
  NewProduct.prototype.tax = function(){
     taxCalc = total * .096;
     taxDisplay = taxCalc.toFixed(2);
@@ -121,6 +126,7 @@ $(document).ready(function() {
     $(".cartItems").hide();
   });
 
+  womanShirtOne.shopInfo();
   womanShirtOne.calculatePrice();
   manShirtOne.calculatePrice();
   womanShirtOne.shipping();
