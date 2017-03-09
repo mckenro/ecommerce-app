@@ -215,18 +215,7 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
-  // womanShirtOne.productdetail();
-  // womanShirtTwo.productdetail();
-  // womanShirtThree.productdetail();
-  // womanShirtFour.productdetail();
-  //menShirtOne.productdetail();
-  //menShirtTwo.productdetail();
-  //menShirtThree.productdetail();
-  //menShirtFour.productdetail();
-  //youthShirtOne.productdetail();
-  //youthShirtTwo.productdetail();
-  //youthShirtThree.productdetail();
-  youthShirtFour.productdetail();
+
 
 
   $(".thumb0").click(function(event) {
@@ -419,21 +408,10 @@ $("#swatch5").hover(function(event) {
     womanShirtOne.shipping();
     womanShirtOne.tax();
   });
-  // $("#showCart").click(function(event){
-  //   event.preventDefault();
-  //   $(product-detail.html).hide();
-  //   $(checkout.html).show();
-  // });
-
-  womanShirtOne.shopInfo();
-  womanShirtOne.shopDisplay();
-
-
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
   $("#grandTotal").text("Total: $" + totalFix);
-
 
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
@@ -442,6 +420,7 @@ $("#swatch5").hover(function(event) {
     var newPrice = totalWithTax - discountFix;
     $("#discountTotal").text("Total with E-mail Discount: $" + newPrice);
   });
+
   $("#thanks").click(function(event){
     event.preventDefault();
     $(".userConformation").hide();
@@ -465,7 +444,28 @@ $("#swatch5").hover(function(event) {
     $(".productDescription").hide();
     $(".checkout").hide();
   });
-  $("#everyoneClick").click(function(event){
+  $(".everyoneClick").click(function(event){
+    event.preventDefault();
+    $(".startPage").hide();
+    $(".shopPage").show();
+    $(".productDescription").hide();
+    $(".checkout").hide();
+  });
+  $(".manClick").click(function(event){
+    event.preventDefault();
+    $(".startPage").hide();
+    $(".shopPage").show();
+    $(".productDescription").hide();
+    $(".checkout").hide();
+  });
+  $(".womanClick").click(function(event){
+    event.preventDefault();
+    $(".startPage").hide();
+    $(".shopPage").show();
+    $(".productDescription").hide();
+    $(".checkout").hide();
+  });
+  $(".kidClick").click(function(event){
     event.preventDefault();
     $(".startPage").hide();
     $(".shopPage").show();
