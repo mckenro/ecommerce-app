@@ -19,12 +19,101 @@ function NewProduct(title, category, description, price, images, thumbnails, swa
  this.propertiesList = propertiesList;
 }
 
+// womens shirt prototypes go below here
+var womanShirtOne = new NewProduct("Womens Shirt One", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/W1_coral.png","img/W1_blue.png", "img/W1_purple.png", "img/W1_gray.png"],
+["img/Thumbs/W1_coral_thumb.jpg", "img/Thumbs/W1_blue_thumb.jpg", "img/Thumbs/W1_purple_thumb.jpg", "img/Thumbs/W1_gray_thumb.jpg"],
+["img/swatch/W1_coral_Swatch.jpg", "img/swatch/W1_blue_Swatch.jpg", "img/swatch/W1_purple_Swatch.jpg", "img/swatch/W1_gray_Swatch.jpg"],
+["Heather Gray", "Ocean Blue", "Purple", "Coral"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
 
-var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+var womanShirtTwo = new NewProduct("Womens Shirt Two", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/W2_black.png","img/W2_Gray.png", "img/W2_Navy.png", "img/W2_Turqouise.png"],
+["img/Thumbs/W2_black_thumb.jpg", "img/Thumbs/W2_Gray_thumb.jpg", "img/Thumbs/W2_Navy_thumb.jpg", "img/Thumbs/W2_Turqouise_thumb.jpg"],
+["img/swatch/M4_Black_Swatch.jpg", "img/swatch/W2_Gray_Swatch.jpg", "img/swatch/W2_Navy_Swatch.jpg", "img/swatch/W2_Turqouise_Swatch.jpg"],
+["Heather Black", "Heather Gray", "Navy", "Turqouise"], ["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
 
+var womanShirtThree = new NewProduct("Womens Shirt Three", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/W3_Red.png","img/W3_Aqua.png", "img/W3_Purple.png", "img/W3_Dark-Gray.png"],
+["img/Thumbs/W3_Red_thumb.jpg", "img/Thumbs/W3_Aqua_thumb.jpg", "img/Thumbs/W3_Purple_thumb.jpg", "img/Thumbs/W3_Dark-Gray_thumb.jpg"],
+["img/swatch/W3_Red_Swatch.jpg", "img/swatch/W3_Aqua_Swatch.jpg", "img/swatch/W3_Purple_Swatch.jpg", "img/swatch/W3_Dark-Gray_Swatch.jpg"],
+["Deep Red", "Aqua", "Purple", "Dark Gray"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+
+var womanShirtFour = new NewProduct("Womens Shirt Four", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/W4_Gold.png","img/W4_Blue.png", "img/W4_Red.png", "img/W4_Gray.png"],
+["img/Thumbs/W4_Gold_thumb.jpg", "img/Thumbs/W4_Blue_thumb.jpg", "img/Thumbs/W4_Red_thumb.jpg", "img/Thumbs/W4_Gray_thumb.jpg"],
+["img/swatch/W4_Gold_Swatch.jpg", "img/swatch/W4_Blue_Swatch.jpg", "img/swatch/W4_Red_Swatch.jpg", "img/swatch/W4_Gray_Swatch.jpg"],
+["Gold Heather", "Ocean Blue", "Deep Red", "Heather Gray"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+
+// mens shirt prototypes go below here
+var menShirtOne = new NewProduct("Mens Shirt One", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/M1_Red.png","img/M1_Blue.png", "img/M1_Green.png", "img/M1_Gray.png"],
+["img/Thumbs/M1_Red_thumb.jpg", "img/Thumbs/M1_Blue_thumb.jpg", "img/Thumbs/M1_Green_thumb.jpg", "img/Thumbs/M1_Gray_thumb.jpg"],
+["img/swatch/M1_Red_Swatch.jpg", "img/swatch/M1_Blue_Swatch.jpg", "img/swatch/M1_Green_Swatch.jpg", "img/swatch/M1_Gray_Swatch.jpg"],
+["Heather Red", "Ocean Blue", "Heather Green", "Heather Gray"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+var menShirtTwo = new NewProduct("Mens Shirt Two", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 37,
+["img/M2_Red.png","img/M2_Navy.png", "img/M2_Purple.png", "img/M2_Gray.png"],
+["img/Thumbs/M2_Red_thumb.jpg", "img/Thumbs/M2_Navy_thumb.jpg", "img/Thumbs/M2_Purple_thumb.jpg", "img/Thumbs/M2_Gray_thumb.jpg"],
+["img/swatch/M2_Red_Swatch.jpg", "img/swatch/M2_Navy_Swatch.jpg", "img/swatch/M2_Purple_Swatch.jpg", "img/swatch/M2_Gray_Swatch.jpg"],
+["Heather Red", "Navy", "Heather Purple", "Heather Gray"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+var menShirtThree = new NewProduct("Mens Shirt Three", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/M3_Blue.png","img/M3_Eggplant.png", "img/M3_Olive.png", "img/M3_Gray.png"],
+["img/Thumbs/M3_Blue_thumb.jpg", "img/Thumbs/M3_Egplant_thumb.jpg", "img/Thumbs/M3_Olive_thumb.jpg", "img/Thumbs/M3_Gray_thumb.jpg"],
+["img/swatch/M3_Blue_Swatch.jpg", "img/swatch/M3_Eggplant_Swatch.jpg", "img/swatch/M3_Olive_Swatch.jpg", "img/swatch/M3_Gray_Swatch.jpg"],
+["Heather Blue", "Eggplant", "Olive", "Heather Gray"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+var menShirtFour = new NewProduct("Mens Shirt Four", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 28,
+["img/M4_Navy.png","img/M4_Green.png", "img/M4_Brown.png", "img/M4_Black.png"],
+["img/Thumbs/M4_Navy_thumb.jpg", "img/Thumbs/M4_Green_thumb.jpg", "img/Thumbs/M4_Brown_thumb.jpg", "img/Thumbs/M4_Black_thumb.jpg"],
+["img/swatch/M4_Navy_Swatch.jpg", "img/swatch/M4_Green_Swatch.jpg", "img/swatch/M4_Brown_Swatch.jpg", "img/swatch/M4_Black_Swatch.jpg"],
+["Midnight Navy", "Heather Green", "Espresso", "Heather Black"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+// youth shirt prototypes go below here
+var youthShirtOne = new NewProduct("Youth Shirt One", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/Y1_Gray.png","img/Y1_Navy.png", "img/Y1_Espresso.png", "img/Y1_Red.png"],
+["img/Thumbs/Y1_Gray_thumb.jpg", "img/Thumbs/Y1_Navy_thumb.jpg", "img/Thumbs/Y1_Espresso_thumb.jpg", "img/Thumbs/Y1_Red_thumb.jpg"],
+["img/swatch/Y1_Gray_Swatch.jpg", "img/swatch/Y1_Navy_Swatch.jpg", "img/swatch/Y1_Espresso_Swatch.jpg", "img/swatch/Y1_Red_Swatch.jpg"],
+["Heather Gray", "Navy", "Espresso", "Heather Red"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+var youthShirtTwo = new NewProduct("Youth Shirt Two", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/Y2_Orange.png","img/Y2_Blue.png", "img/Y2_Purple.png", "img/Y2_Gray.png"],
+["img/Thumbs/Y2_Orange_thumb.jpg", "img/Thumbs/Y2_Blue_thumb.jpg", "img/Thumbs/Y2_Purple_thumb.jpg", "img/Thumbs/Y2_Gray_thumb.jpg"],
+["img/swatch/Y2_Orange_Swatch.jpg", "img/swatch/Y2_Blue_Swatch.jpg", "img/swatch/Y2_Purple_Swatch.jpg", "img/swatch/Y2_Gray_Swatch.jpg"],
+["Heather Orange", "Ocean Blue", "Heather Purple", "Heather Gray"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+var youthShirtThree = new NewProduct("Youth Shirt Three", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/Y3_Red.png","img/Y3_Blue.png", "img/Y3_Green.png", "img/Y3_Gray.png"],
+["img/Thumbs/Y3_Red_thumb.jpg", "img/Thumbs/Y3_Blue_thumb.jpg", "img/Thumbs/Y3_Green_thumb.jpg", "img/Thumbs/Y3_Gray_thumb.jpg"],
+["img/swatch/Y3_Red_Swatch.jpg", "img/swatch/Y3_Blue_Swatch.jpg", "img/swatch/Y3_Green_Swatch.jpg", "img/swatch/Y3_Gray_Swatch.jpg"],
+["Heather Red", "Ocean Blue", "Heather Green", "Heather Gray"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+
+var youthShirtFour = new NewProduct("Youth Shirt Four", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
+["img/Y4_Maroon.png","img/Y4_Blue.png", "img/Y4_Purple.png", "img/Y4_Slate.png"],
+["img/Thumbs/Y4_Maroon_thumb.jpg", "img/Thumbs/Y4_Blue_thumb.jpg", "img/Thumbs/Y4_Purple_thumb.jpg", "img/Thumbs/Y4_Slate_thumb.jpg"],
+["img/swatch/Y4_Maroon_Swatch.jpg", "img/swatch/Y4_Blue_Swatch.jpg", "img/swatch/Y4_Purple_Swatch.jpg", "img/swatch/Y4_Slate_Swatch.jpg"],
+["Maroon", "Ocean Blue", "Purple", "Slate"],
+["Small", "Medium", "Large", "Extra Large"],
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
 
 NewProduct.prototype.productdetail = function(){
-
   //loop to add all product thumbnail images
   for (var i = 0; i< this.thumbnails.length; i++) {
     $("#thumbnail-area").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
@@ -109,6 +198,7 @@ NewProduct.prototype.productdetail = function(){
  }*/
 
  NewProduct.prototype.shopDisplay = function() {
+
  $("#shopGrid").append(
    "<div class='col-md-3'>" +
    "<a href='#'><img class='shop' src=" + this.images + "></a>"
@@ -129,10 +219,20 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
+  // womanShirtOne.productdetail();
+  // womanShirtTwo.productdetail();
+  // womanShirtThree.productdetail();
+  // womanShirtFour.productdetail();
+  //menShirtOne.productdetail();
+  //menShirtTwo.productdetail();
+  //menShirtThree.productdetail();
+  //menShirtFour.productdetail();
+  //youthShirtOne.productdetail();
+  //youthShirtTwo.productdetail();
+  //youthShirtThree.productdetail();
+  youthShirtFour.productdetail();
 
-//  var colorSelection = $("#selColor").val();
 
-  womanShirtOne.productdetail();
   $(".thumb0").click(function(event) {
     event.preventDefault();
     $("#product2").hide();
@@ -166,7 +266,7 @@ $(document).ready(function() {
     $("#product2").hide();
     $("#product4").hide();
     $("#product5").hide();
-    $("#product6").hide();
+    $("#product0").hide();
     $("#product3").show();
   });
   $(".thumb4").click(function(event) {
