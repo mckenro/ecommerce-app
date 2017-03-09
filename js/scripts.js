@@ -104,15 +104,16 @@ NewProduct.prototype.productdetail = function(){
  }
 
 
- NewProduct.prototype.shopInfo = function() {
+ /*NewProduct.prototype.shopInfo = function() {
  $(".title").append( this.title + " $" + this.price);
- }
+ }*/
 
  NewProduct.prototype.shopDisplay = function() {
- $(".row").append(
+ $("#shopGrid").append(
    "<div class='col-md-3'>" +
-   "<a href='#'><img class="shop" src=" + this.images"></a>"
-   + "<p class='title'></p>" + "</div>")
+   "<a href='#'><img class='shop' src=" + this.images + "></a>"
+   + "<p class='title'>" + this.title + " $" + this.price +
+   "</p>" + "</div>")
 }
 
 CustomerInfo.prototype.makethingsappear = function(){
@@ -331,7 +332,7 @@ $("#swatch5").hover(function(event) {
 
 
 
-  womanShirtOne.shopInfo();
+  //womanShirtOne.shopInfo();
   womanShirtOne.shopDisplay();
 
   $("#itemTotal").append(total);

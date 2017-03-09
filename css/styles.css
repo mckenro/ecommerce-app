@@ -80,8 +80,15 @@ h1 {
 
 .footer {
   height: 200px;
-  background-color: green;
+  background-color: #c8cbd1;
+  width: 100%;
 }
+
+#footerText {
+  position: absolute;
+  margin: 60px 0px 0px 210px;
+}
+
 #cartCount{
   background-color: #d50000;
   color: white;
