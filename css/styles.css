@@ -1,3 +1,35 @@
+a {
+  color: white;
+}
+
+.startPage a:hover {
+  text-decoration: none;
+  color: #ff4444;
+}
+
+.imgHome img {
+  background: no-repeat center center fixed;
+  /*background-size: cover;*/
+  background-position: left top;
+  padding: 0px;
+  margin: -20px;
+  /*height: 100vh;*/
+  width: 100%;
+}
+
+.col-lg-6 {
+  padding: 0px;
+}
+
+/*.imgHome{
+  background: no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  width:100%;
+  margin:0;
+  padding:0;
+}*/
+
 /*hiding all the "Pages" to make it buttons interactive*/
 .showNavagation{
 
@@ -32,10 +64,11 @@ body {
 
 /*This is for text on photos on the homepage*/
 #womanTitle, #manTitle, #kidTitle, #everyoneTitle{
+  font-weight: 300;
   position: absolute;
-  /*margin: 30px 125px;*/
-  font-size: 100px;
-  text-shadow: 2px 2px black;
+  margin: 20px 50px;
+  font-size: 80px;
+  text-shadow: 2px 2px 3px #212121;
   float:right;
 }
 /*This is for text on photos on the homepage*/
@@ -45,24 +78,6 @@ body {
 /* This is the top title text on homepage*/
 .display-1 {
   font-size: 120px;
-}
-
-/* These next three only affect homepage images*/
-.imgHome{
-  background: no-repeat center center fixed;
-  background-size: contain;
-  background-position: left top;
-  width:100%;
-  margin:0;
-  padding:0;
-}
-
-a {
-  color: white;
-}
-
-a hover {
-  color: blue;
 }
 
 .shop{
@@ -177,6 +192,10 @@ h1 {
 }
 #cartTitle{
   border-bottom: 2px solid blue;
+}
+
+#cartButton {
+  margin-right: 10px;
 }
 
 .emptyCart{

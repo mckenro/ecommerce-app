@@ -6,47 +6,75 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Product Page</title><html>
+    <title>Tee Shirt's and Stuff</title><html>
   <body>
+
+    <!--Nav Bar-->
+    <div class="showNavagation">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a id="homeButton" href="index.html"  class="navbar-brand">Tee Shirt's and Stuff</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>Men's</li>
+                <li>Women's</li>
+                <li>Kid's</li>
+              </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
+          <button id="cartButton" class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
+        </div>
+      </nav>
+    </div>
+
     <!--START PAGE-->
   <div class="startPage">
     <div class="row">
       <div id="women">
         <div class="col-lg-6">
-        <div class="imgHome">
-         <h1 id="womanTitle"><a class= "womanClick" href="#">Womans</a></h1>
-        <img class="imgHome" src="img/Women.png">
+          <h1 id="womanTitle"><a href="#">Women's</a></h1>
+          <div class="imgHome">
+            <img src="img/Women.png">
+          </div>
         </div>
       </div>
-    </div>
-    <div id="men">
-      <div class="col-lg-6">
-  <div class="imgHome" style='background-image:url("img/Men.png");'>
-          <h1 id="manTitle"><a class= "manClick" href="#">Mens</a></h1>
-          <img class="imgHome" src="img/Men.png">
+      <div id="men">
+        <div class="col-lg-6">
+          <div class="imgHome">
+            <h1 id="manTitle"><a href="#">Men's</a></h1>
+            <div class="imgHome">
+              <img class="imgHome" src="img/Men.png">
+            </div>
+          </div>
         </div>
-       </div>
-     </div>
-    </div>
-      <div class="row">
-        <div id="kids">
-       <div class="imgHome">
-          <div class="col-lg-6">
-              <h1 id="kidTitle"><a class= "kidClick" href="#">Kids</a></h1>
+      </div>
+   </div><!-- end row -->
+
+    <div class="row">
+      <div id="kids">
+        <div class="col-lg-6">
+            <h1 id="kidTitle"><a href="#">Kids</a></h1>
+            <div class="imgHome">
               <img class="imgHome" src="img/Kids.png">
             </div>
         </div>
-        </div>
+      </div>
       <div id="everyone">
-        <div class="imgHome">
         <div class="col-lg-6">
           <h1 id="everyoneTitle"><a class="everyoneClick" href="#">Everyone</a></h1>
-          <img class= "imgHome" src="img/everyoneport.jpg">
+          <div class="imgHome">
+            <img class= "imgHome" src="img/everyoneport.jpg">
          </div>
-    </div>
+        </div>
      </div>
-  </div>
-  </div>
+   </div>
+
   <!--Nav Bar-->
   <div class="showNavagation">
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -68,9 +96,11 @@
         </ul>
         <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
         <button id="cartButton" class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
-      </div>
+      </div><!--end container -->
     </nav>
-  </div>
+  </div><!--end showNavigation -->
+  </div><!-- end .startPage -->
+
   <!--Shop Page-->
   <div class=shopPage>
     <div class="container fluid-responsive">
@@ -133,7 +163,7 @@
     <!--checkout page-->
     <div class="checkout">
       <div class="container">
-        <h1 id="cartTitle">SHOPPING CART<img id="cartSymbol" src="img/shopping-cart.png"></h1>
+        <h1 id="cartTitle">Shopping Cart<img id="cartSymbol" src="img/shopping-cart.png"></h1>
       <!--user conformation displays here-->
       <div class="userConformation">
         <h3>Payment Information:</h3>
