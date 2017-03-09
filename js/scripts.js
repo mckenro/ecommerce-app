@@ -230,18 +230,282 @@ $(document).ready(function() {
   youthShirtThree.shopDisplay();
   youthShirtFour.shopDisplay();
 
+  $(".thumb0").click(function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product0").show();
+  });
+  $(".thumb1").click(function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product1").show();
+  });
+  $(".thumb2").click(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product2").show();
+  });
+  $(".thumb3").click(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product3").show();
+  });
+  $(".thumb4").click(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product4").show();
+  });
+  $(".thumb5").click(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product0").hide();
+    $("#product5").show();
+  });
+
   //show shirt detail
     $("#wo").click(function(event){
       event.preventDefault();
       $(".shopPage").hide();
       $(".productDescription").show();
       womanShirtOne.productdetail();
+
+      //swatch hover events
+      $("#swatch0").hover(function(event) {
+        event.preventDefault();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+        $("#product0").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+        $("#product0").show();
+      });
+      $("#swatch1").hover(function(event) {
+        event.preventDefault();
+        $("#product0").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product2").hide();
+        $("#product1").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product2").hide();
+        $("#product1").hide();
+      });
+      $("#swatch2").hover(function(event) {
+        event.preventDefault();
+        $("#product1").hide();
+        $("#product2").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product0").hide();
+        $("#product2").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product2").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+        $("#product2").hide();
+      });
+      $("#swatch3").hover(function(event) {
+        event.preventDefault();
+        $("#product1").hide();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product5").hide();
+        $("#product0").hide();
+        $("#product3").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+      });
+      $("#swatch4").hover(function(event) {
+        event.preventDefault();
+        $("#product1").hide();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product5").hide();
+        $("#product0").hide();
+        $("#product4").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product3").hide();
+        $("#product1").hide();
+        $("#product5").hide();
+        $("#product2").hide();
+        $("#product4").hide();
+      });
+      $("#swatch5").hover(function(event) {
+        event.preventDefault();
+        $("#product0").hide();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product1").hide();
+        $("#product5").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product1").hide();
+        $("#product6").hide();
+        $("#product5").hide();
+      });
+
+
     });
     $("#wt").click(function(event){
       event.preventDefault();
       $(".shopPage").hide();
       $(".productDescription").show();
       womanShirtTwo.productdetail();
+      //swatch hover events
+      $("#swatch0").hover(function(event) {
+        event.preventDefault();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+        $("#product0").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+        $("#product0").show();
+      });
+      $("#swatch1").hover(function(event) {
+        event.preventDefault();
+        $("#product0").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product2").hide();
+        $("#product1").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product2").hide();
+        $("#product1").hide();
+      });
+      $("#swatch2").hover(function(event) {
+        event.preventDefault();
+        $("#product1").hide();
+        $("#product2").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product0").hide();
+        $("#product2").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product2").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+        $("#product2").hide();
+      });
+      $("#swatch3").hover(function(event) {
+        event.preventDefault();
+        $("#product1").hide();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product5").hide();
+        $("#product0").hide();
+        $("#product3").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product5").hide();
+        $("#product1").hide();
+      });
+      $("#swatch4").hover(function(event) {
+        event.preventDefault();
+        $("#product1").hide();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product5").hide();
+        $("#product0").hide();
+        $("#product4").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product3").hide();
+        $("#product1").hide();
+        $("#product5").hide();
+        $("#product2").hide();
+        $("#product4").hide();
+      });
+      $("#swatch5").hover(function(event) {
+        event.preventDefault();
+        $("#product0").hide();
+        $("#product2").hide();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product1").hide();
+        $("#product5").show();
+      } , function(event) {
+        event.preventDefault();
+        $("#product0").show();
+        $("#product3").hide();
+        $("#product4").hide();
+        $("#product1").hide();
+        $("#product6").hide();
+        $("#product5").hide();
+      });
     });
     $("#wth").click(function(event){
       event.preventDefault();
@@ -304,163 +568,6 @@ $(document).ready(function() {
       youthShirtThree.productdetail();
     });
 
-  $(".thumb0").click(function(event) {
-    event.preventDefault();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product1").hide();
-    $("#product0").show();
-  });
-  $(".thumb1").click(function(event) {
-    event.preventDefault();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product1").show();
-  });
-  $(".thumb2").click(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product2").show();
-  });
-  $(".thumb3").click(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product2").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product3").show();
-  });
-  $(".thumb4").click(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product4").show();
-  });
-  $(".thumb5").click(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product0").hide();
-    $("#product5").show();
-  });
-  //swatch hover events
-  $("#swatch0").hover(function(event) {
-    event.preventDefault();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product1").hide();
-    $("#product0").show();
-  } , function(event) {
-    event.preventDefault();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product1").hide();
-    $("#product0").show();
-  });
-  $("#swatch1").hover(function(event) {
-    event.preventDefault();
-    $("#product0").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product2").hide();
-    $("#product1").show();
-  } , function(event) {
-    event.preventDefault();
-    $("#product0").show();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product2").hide();
-    $("#product1").hide();
-  });
-  $("#swatch2").hover(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product2").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product2").show();
-  } , function(event) {
-    event.preventDefault();
-    $("#product0").show();
-    $("#product2").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product1").hide();
-    $("#product2").hide();
-  });
-  $("#swatch3").hover(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product3").show();
-  } , function(event) {
-    event.preventDefault();
-    $("#product0").show();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product5").hide();
-    $("#product1").hide();
-  });
-  $("#swatch4").hover(function(event) {
-    event.preventDefault();
-    $("#product1").hide();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product5").hide();
-    $("#product0").hide();
-    $("#product4").show();
-  } , function(event) {
-    event.preventDefault();
-    $("#product0").show();
-    $("#product3").hide();
-    $("#product1").hide();
-    $("#product5").hide();
-    $("#product2").hide();
-    $("#product4").hide();
-  });
-  $("#swatch5").hover(function(event) {
-    event.preventDefault();
-    $("#product0").hide();
-    $("#product2").hide();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product1").hide();
-    $("#product5").show();
-  } , function(event) {
-    event.preventDefault();
-    $("#product0").show();
-    $("#product3").hide();
-    $("#product4").hide();
-    $("#product1").hide();
-    $("#product6").hide();
-    $("#product5").hide();
-  });
 
   $("#userInput").submit(function(event){
     event.preventDefault();
@@ -487,34 +594,39 @@ $(document).ready(function() {
     $(".emptyCart").hide();
     $("#purchase").hide();
     $(".cartItems").hide();
+    $(".itemsInCart").hide();
   });
   $("#addToCart").click(function(event){
     event.preventDefault();
     womanShirtOne.calculatePrice();
     womanShirtOne.shipping();
     womanShirtOne.tax();
-  });
-
-  $("#itemTotal").append(total);
-  var totalWithTax = total + ship + taxCalc;
-  var totalFix = totalWithTax.toFixed(2);
-  $("#grandTotal").text("Total: $" + totalFix);
+    $("#itemTotal").text("Item total: $" + total);
+    var totalWithTax = total + ship + taxCalc;
+    var totalFix = totalWithTax.toFixed(2);
+    $("#grandTotal").text("Total: $" + totalFix);
 
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
     var discount = (totalWithTax * .2);
-    var discountFix = discount.toFixed(2);
-    var newPrice = totalWithTax - discountFix;
+    var discountFix = totalWithTax - discount;
+    var newPrice = discountFix.toFixed(2);
     $("#discountTotal").text("Total with E-mail Discount: $" + newPrice);
+    $(".hideUserInput").show();
+    $("#emailDiscount").hide();
+    $(".emptyCart").hide();
+    $("#purchase").hide();
+    $(".cartItems").hide();
+    $(".itemsInCart").hide();
   });
-
+});
   $("#thanks").click(function(event){
     event.preventDefault();
     $(".userConformation").hide();
     $("#priceCalculator").hide();
     $("#purchase").hide();
     $(".thankYou").show();
-
+    $("#cartCount").hide();
   });
   //Nav bar commands
   $("#cartButton").click(function(event){

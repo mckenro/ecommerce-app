@@ -42,7 +42,7 @@ a {
 }
 
 .checkout{
-  /*display:none;*/
+  display:none;
 }
 
 #shop {
@@ -189,11 +189,12 @@ h1 {
 }
 
 /* cart styling */
-#emailDiscount{
+/*#emailDiscount{
   margin: 10px 30%;
-}
+}*/
 #cartTitle{
-  border-bottom: 2px solid blue;
+  border-bottom: 1px solid #222222;
+  padding-bottom: 10px;
 }
 
 #cartButton {
@@ -201,31 +202,30 @@ h1 {
 }
 
 .emptyCart{
-  text-align: center;
-  margin: 50px 150px;
+  text-align: left;
+  margin: 50px;
 }
 
-#cartSymbol{
+/*#cartSymbol{
   width:40px;
   float:right;
   margin-right: 20px;
-}
+}*/
 
 #priceCalculator{
-  background: white;
+  background: #e3f2fd;
+  border-radius: 10px;
   margin-right: 20px;
   margin-left: 10px;
+  margin-top: 60px;
   height:400px;
   width:240px;
-  position:fixed;
-  border: 2px solid black;
+  /*position:fixed;*/
+  border: 1px solid #337ab7;
   float:right;
 }
 
 #priceCalculator h2{
-  background-color: lightblue;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
   padding: 10px 25px;
 }
 
@@ -234,7 +234,7 @@ h1 {
 }
 
 #emailDiscount h3{
-  color: red;
+  color: #c62828;
 }
 
 /*Billing info*/
@@ -251,12 +251,14 @@ h1 {
 }
 
 #userInput h3{
-  border-bottom: 2px solid blue;
+  border-bottom: 1px solid #222222;
+  padding-bottom: 8px;
 }
 
 .hideUserInput{
   position: relative;
   display:none;
+  margin-bottom: 60px;
 }
 
 .userConformation{
@@ -264,19 +266,20 @@ h1 {
 }
 
 #purchase{
-  margin:0 40%;
+  /*margin:0 40%;*/
   display:none;
 }
 
 .cartItems{
-  text-align: center;
+  text-align: left;
 }
 
 .orderStyle{
   text-decoration: none;
   list-style-type: none;
-  font-size: 30px;
-  margin-left: 60px;
+  font-size: 20px;
+  margin-top: 10px;
+  /*margin-left: 60px;*/
 }
 
 .priceSheet{

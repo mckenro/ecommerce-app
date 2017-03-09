@@ -6,7 +6,7 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Tee Shirt's and Stuff</title><html>
+    <title>Tee Shirts and Stuff</title><html>
   <body>
 
     <!--Nav Bar-->
@@ -14,15 +14,15 @@
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <a id="homeButton" href="index.html"  class="navbar-brand">Tee Shirt's and Stuff</a>
+            <a id="homeButton" href="index.html"  class="navbar-brand">Tee Shirts and Stuff</a>
           </div>
           <ul class="nav navbar-nav">
             <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="manClick"><a href='#'>Men's</a></li>
-                <li class="womanClick"><a href='#'>Women's</a></li>
-                <li class="kidClick"><a href='#'>Kid's</a></li>
-                <li class="everyoneClick"><a href='#'>Everyone</a></li>
+                <li class="manClick"><a href='#'>Stuff for Men</a></li>
+                <li class="womanClick"><a href='#'>Stuff for Women</a></li>
+                <li class="kidClick"><a href='#'>Stuff for Kids</a></li>
+                <li class="everyoneClick"><a href='#'>Stuff for Everyone</a></li>
               </ul>
             </li>
             <li><a href="#">About</a></li>
@@ -60,7 +60,7 @@
     <div class="row">
       <div id="kids">
         <div class="col-lg-6">
-            <h1 id="kidTitle"><a class="kidClick" href="#">Kids</a></h1>
+            <h1 id="kidTitle"><a class="kidClick" href="#">Kid's</a></h1>
             <div class="imgHome">
               <img class="imgHome" src="img/Kids.png">
             </div>
@@ -139,142 +139,151 @@
     <!--checkout page-->
     <div class="checkout">
       <div class="container">
-        <h1 id="cartTitle">Shopping Cart<img id="cartSymbol" src="img/shopping-cart.png"></h1>
+        <h1 id="cartTitle">Shopping Cart</h1>
       <!--user conformation displays here-->
       <div class="userConformation">
         <h3>Payment Information:</h3>
         <ul id="payInfo"></ul>
         <h3>Shipping Info:</h3>
         <ul id="shipInfo"></ul>
-        <button id="thanks" type="submit">Finish order</button>
+        <button class="btn btn-default" id="thanks" type="submit">Finish order</button>
       </div>
       <div class="thankYou">
         <h1>Thank you for shopping with Tee Shirts and Stuff!</h1>
         <h3>Your awesome new products will arrive in 3-5 business days</h3>
       </div>
         <!--emailDiscount-->
-        <form id="emailDiscount">
-          <h3>Sign up for our mailing list and receive 20% off your first order!</h3>
-          <div class="form-group">
-            <label for="email"></label>
-            <input id="email" class="form-control" type="email" placeholder="Email" required>
-          </div>
-          <button type="submit">Add E-mail</button>
-        </form>
-        <div class="row">
-          <div class="col-sm-9">
+      <div class="row">
+        <div class="col-md-4">
+          <form id="emailDiscount">
+            <h3>Sign up for our mailing list and receive 20% off your first order!</h3>
+            <div class="form-group">
+              <label for="email"></label>
+              <input id="email" class="form-control" type="email" placeholder="Email" required>
+            </div>
+            <button class= "btn btn-default" type="submit">Add E-mail</button>
+            <button class="btn btn-success" id="purchase" type=submit>No Thanks</button>
+          </form>
+
+        </div>
+        <div class="col-md-8">
+            <h2 class="itemsInCart">Items Currently in Your Cart</h2>
             <div class="emptyCart">
               <h3>Your cart is currently empty</h3>
             </div>
-            <div>
-              <ul class="cartItems"><ul>
-            </div>
-            <button id="purchase" type=submit>Purchase</button>
-          </div>
+            <ul class="cartItems"><ul>
         </div>
-      </div>
-          <!--displays price-->
-          <div class="col-sm-3">
-            <table class="table">
-              <div id="priceCalculator">
-                <div class="table-header">
-                  <h2>Order Summary</h2>
-                </div>
-                <div class="priceSheet">
-                  <p id="itemTotal">Items Total: $</p>
-                  <p id="shippingTotal">Shipping: $</p>
-                  <p id="tax">Tax: $</p>
-                  <p id="grandTotal"></p>
-                  <p id="discountTotal"></p>
-                </div>
-              </div>
-            </table>
-          </div>
+      </div><!-- end row -->
+      </div><!-- end container -->
+
       <!--Takes user info and payment-->
       <form id="userInput">
         <div class="hideUserInput">
-      <div class="container">
-        <div class="col-sm-3">
-          <h3>Billing Address</h3>
-        </div>
-        <div class="col-sm-5">
-          <div id="billingInfo">
-            <div class="form-group">
-              <label for="name"></label>
-              <input id="name" class="form-control" type="text" placeholder="Name on Card" required>
-            </div>
-              <div class="form-group">
-                <label for="address"></label>
-                <input id="address" class="form-control" type="text" placeholder="Address" required>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h3>Billing Address</h3>
               </div>
-              <div class="form-group">
-                <label for="city"></label>
-                <input id="city" class="form-control" type="text" placeholder="City" required>
-              </div>
-              <div class="form-group">
-                <label for="state"></label>
-                <input id="state" class="form-control" type="text" placeholder="State" required>
-              </div>
-              <div class="form-group">
-                <label for="zip"></label>
-                <input id="zip" class="form-control" type="text" placeholder="Zip Code" required>
-              </div>
-              <div class="form-group">
-                <label for="phone"></label>
-                <input id="phone" class="form-control" type="text" placeholder="Phone Number" required>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="col-sm-3">
-            <h3>Shipping Address</h3>
-          </div>
-          <div class="col-sm-5">
-            <div id="addressInfo">
-                <div class="form-group">
-                  <label for="shipAddress"></label>
-                  <input id="shipAddress" class="form-control" type="text" placeholder="Address" required>
-                </div>
-                <div class="form-group">
-                  <label for="shipCity"></label>
-                  <input id="shipCity" class="form-control" type="text" placeholder="City" required>
-                </div>
-                <div class="form-group">
-                  <label for="shipState"></label>
-                  <input id="shipState" class="form-control" type="text" placeholder="State" required>
-                </div>
-                <div class="form-group">
-                  <label for="shipZip"></label>
-                  <input id="shipZip" class="form-control" type="text" placeholder="Zip Code" required>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div class="container">
-          <div class="col-sm-3">
-            <h3>Credit Card Info</h3>
-          </div>
-            <div class="col-sm-5">
-              <div id="creditCardInfo">
-                <div class="form-group">
-                  <label for="cardNumber"></label>
-                  <input id="cardNumber" class="form-control" type="text" placeholder="Credit Card Number" required>
-                </div>
+              <div class="col-sm-5">
+                <div id="billingInfo">
                   <div class="form-group">
-                    <label for="expire"></label>
-                    <input id="expire" class="form-control" type="text" placeholder="Expiration Date" required>
+                    <label for="name"></label>
+                    <input id="name" class="form-control" type="text" placeholder="Name on Card" required>
                   </div>
                   <div class="form-group">
-                    <label for="cvc"></label>
-                    <input id="cvc" class="form-control" type="text" placeholder="CVC" required>
+                    <label for="address"></label>
+                    <input id="address" class="form-control" type="text" placeholder="Address" required>
                   </div>
-                  <button type="submit">Confirm Purchase</button>
+                  <div class="form-group">
+                    <label for="city"></label>
+                    <input id="city" class="form-control" type="text" placeholder="City" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="state"></label>
+                    <input id="state" class="form-control" type="text" placeholder="State" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="zip"></label>
+                    <input id="zip" class="form-control" type="text" placeholder="Zip Code" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone"></label>
+                    <input id="phone" class="form-control" type="text" placeholder="Phone Number" required>
+                  </div>
+                  </div><!-- end #billingInfo -->
+                </div>
+                <!--displays price-->
+                <div class="col-md-3">
+                  <table class="table">
+                    <div id="priceCalculator">
+                      <div class="table-header">
+                        <h2>Order Summary</h2>
+                      </div>
+                      <div class="priceSheet">
+                        <p id="itemTotal">Items Total: $</p>
+                        <p id="shippingTotal">Shipping: $</p>
+                        <p id="tax">Tax: $</p>
+                        <p id="grandTotal"></p>
+                        <p id="discountTotal"></p>
+                      </div>
+                    </div>
+                  </table>
                 </div>
               </div>
-            </form>
-          </div>
-        </div>
+            </div><!-- end container -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Shipping Address</h3>
+            </div>
+            <div class="col-md-5">
+              <div id="addressInfo">
+                  <div class="form-group">
+                    <label for="shipAddress"></label>
+                    <input id="shipAddress" class="form-control" type="text" placeholder="Address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="shipCity"></label>
+                    <input id="shipCity" class="form-control" type="text" placeholder="City" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="shipState"></label>
+                    <input id="shipState" class="form-control" type="text" placeholder="State" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="shipZip"></label>
+                    <input id="shipZip" class="form-control" type="text" placeholder="Zip Code" required>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end row -->
+          </div><!-- end container -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <h3>Payment Information</h3>
+                </div>
+                <div class="col-md-5">
+                  <div id="creditCardInfo">
+                    <div class="form-group">
+                      <label for="cardNumber"></label>
+                      <input id="cardNumber" class="form-control" type="text" placeholder="Credit Card Number" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="expire"></label>
+                      <input id="expire" class="form-control" type="text" placeholder="Expiration Date" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="cvc"></label>
+                      <input id="cvc" class="form-control" type="text" placeholder="CVC" required>
+                    </div>
+                      <button class="btn btn-success" type="submit">Confirm Purchase</button>
+                  </div><!-- end #creditCardInfo -->
+                </div>
+              </form>
+              </div>
+          </div><!-- end container -->
+        </div><!-- end #hideUserInput -->
     </div>
   </body>
 </html>
