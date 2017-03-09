@@ -6,7 +6,7 @@ var taxCalc = 0;
 var cartCounter = 0;
 
 
-function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes, propertiesList){
+function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes, propertiesList, click){
  this.title = title;
  this.category = category;
  this.description = description;
@@ -17,6 +17,7 @@ function NewProduct(title, category, description, price, images, thumbnails, swa
  this.colors = colors;
  this.sizes = sizes;
  this.propertiesList = propertiesList;
+ this.click = click;
 }
 
 // womens shirt prototypes go below here
@@ -26,26 +27,26 @@ var womanShirtOne = new NewProduct("Womens Shirt One", "Womens", "Gastropub pork
 ["img/swatch/W1_coral_Swatch.jpg", "img/swatch/W1_blue_Swatch.jpg", "img/swatch/W1_purple_Swatch.jpg", "img/swatch/W1_gray_Swatch.jpg"],
 ["Heather Gray", "Ocean Blue", "Purple", "Coral"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"], "wo");
 
 var womanShirtTwo = new NewProduct("Womens Shirt Two", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/W2_black.png","img/W2_Gray.png", "img/W2_Navy.png", "img/W2_Turqouise.png"],
 ["img/Thumbs/W2_black_thumb.jpg", "img/Thumbs/W2_Gray_thumb.jpg", "img/Thumbs/W2_Navy_thumb.jpg", "img/Thumbs/W2_Turqouise_thumb.jpg"],
 ["img/swatch/M4_Black_Swatch.jpg", "img/swatch/W2_Gray_Swatch.jpg", "img/swatch/W2_Navy_Swatch.jpg", "img/swatch/W2_Turqouise_Swatch.jpg"],
 ["Heather Black", "Heather Gray", "Navy", "Turqouise"], ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"], "wt");
 
 var womanShirtThree = new NewProduct("Womens Shirt Three", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/W3_Red.png","img/W3_Aqua.png", "img/W3_Purple.png", "img/W3_Dark-Gray.png"],
 ["img/Thumbs/W3_Red_thumb.jpg", "img/Thumbs/W3_Aqua_thumb.jpg", "img/Thumbs/W3_Purple_thumb.jpg", "img/Thumbs/W3_Dark-Gray_thumb.jpg"],
 ["img/swatch/W3_Red_Swatch.jpg", "img/swatch/W3_Aqua_Swatch.jpg", "img/swatch/W3_Purple_Swatch.jpg", "img/swatch/W3_Dark-Gray_Swatch.jpg"],
-["Deep Red", "Aqua", "Purple", "Dark Gray"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+["Deep Red", "Aqua", "Purple", "Dark Gray"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"], "wth");
 
 var womanShirtFour = new NewProduct("Womens Shirt Four", "Womens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/W4_Gold.png","img/W4_Blue.png", "img/W4_Red.png", "img/W4_Gray.png"],
 ["img/Thumbs/W4_Gold_thumb.jpg", "img/Thumbs/W4_Blue_thumb.jpg", "img/Thumbs/W4_Red_thumb.jpg", "img/Thumbs/W4_Gray_thumb.jpg"],
 ["img/swatch/W4_Gold_Swatch.jpg", "img/swatch/W4_Blue_Swatch.jpg", "img/swatch/W4_Red_Swatch.jpg", "img/swatch/W4_Gray_Swatch.jpg"],
-["Gold Heather", "Ocean Blue", "Deep Red", "Heather Gray"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+["Gold Heather", "Ocean Blue", "Deep Red", "Heather Gray"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"], "wf");
 
 // mens shirt prototypes go below here
 var menShirtOne = new NewProduct("Mens Shirt One", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
@@ -54,7 +55,7 @@ var menShirtOne = new NewProduct("Mens Shirt One", "Mens", "Gastropub pork belly
 ["img/swatch/M1_Red_Swatch.jpg", "img/swatch/M1_Blue_Swatch.jpg", "img/swatch/M1_Green_Swatch.jpg", "img/swatch/M1_Gray_Swatch.jpg"],
 ["Heather Red", "Ocean Blue", "Heather Green", "Heather Gray"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "mo");
 
 var menShirtTwo = new NewProduct("Mens Shirt Two", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 37,
 ["img/M2_Red.png","img/M2_Navy.png", "img/M2_Purple.png", "img/M2_Gray.png"],
@@ -62,7 +63,7 @@ var menShirtTwo = new NewProduct("Mens Shirt Two", "Mens", "Gastropub pork belly
 ["img/swatch/M2_Red_Swatch.jpg", "img/swatch/M2_Navy_Swatch.jpg", "img/swatch/M2_Purple_Swatch.jpg", "img/swatch/M2_Gray_Swatch.jpg"],
 ["Heather Red", "Navy", "Heather Purple", "Heather Gray"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "mt");
 
 var menShirtThree = new NewProduct("Mens Shirt Three", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/M3_Blue.png","img/M3_Eggplant.png", "img/M3_Olive.png", "img/M3_Gray.png"],
@@ -70,7 +71,7 @@ var menShirtThree = new NewProduct("Mens Shirt Three", "Mens", "Gastropub pork b
 ["img/swatch/M3_Blue_Swatch.jpg", "img/swatch/M3_Eggplant_Swatch.jpg", "img/swatch/M3_Olive_Swatch.jpg", "img/swatch/M3_Gray_Swatch.jpg"],
 ["Heather Blue", "Eggplant", "Olive", "Heather Gray"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "mth");
 
 var menShirtFour = new NewProduct("Mens Shirt Four", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 28,
 ["img/M4_Navy.png","img/M4_Green.png", "img/M4_Brown.png", "img/M4_Black.png"],
@@ -78,7 +79,7 @@ var menShirtFour = new NewProduct("Mens Shirt Four", "Mens", "Gastropub pork bel
 ["img/swatch/M4_Navy_Swatch.jpg", "img/swatch/M4_Green_Swatch.jpg", "img/swatch/M4_Brown_Swatch.jpg", "img/swatch/M4_Black_Swatch.jpg"],
 ["Midnight Navy", "Heather Green", "Espresso", "Heather Black"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "mf");
 
 // youth shirt prototypes go below here
 var youthShirtOne = new NewProduct("Youth Shirt One", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
@@ -87,7 +88,7 @@ var youthShirtOne = new NewProduct("Youth Shirt One", "Mens", "Gastropub pork be
 ["img/swatch/Y1_Gray_Swatch.jpg", "img/swatch/Y1_Navy_Swatch.jpg", "img/swatch/Y1_Espresso_Swatch.jpg", "img/swatch/Y1_Red_Swatch.jpg"],
 ["Heather Gray", "Navy", "Espresso", "Heather Red"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "yo");
 
 var youthShirtTwo = new NewProduct("Youth Shirt Two", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/Y2_Orange.png","img/Y2_Blue.png", "img/Y2_Purple.png", "img/Y2_Gray.png"],
@@ -95,7 +96,7 @@ var youthShirtTwo = new NewProduct("Youth Shirt Two", "Mens", "Gastropub pork be
 ["img/swatch/Y2_Orange_Swatch.jpg", "img/swatch/Y2_Blue_Swatch.jpg", "img/swatch/Y2_Purple_Swatch.jpg", "img/swatch/Y2_Gray_Swatch.jpg"],
 ["Heather Orange", "Ocean Blue", "Heather Purple", "Heather Gray"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "yt");
 
 var youthShirtThree = new NewProduct("Youth Shirt Three", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/Y3_Red.png","img/Y3_Blue.png", "img/Y3_Green.png", "img/Y3_Gray.png"],
@@ -103,7 +104,7 @@ var youthShirtThree = new NewProduct("Youth Shirt Three", "Mens", "Gastropub por
 ["img/swatch/Y3_Red_Swatch.jpg", "img/swatch/Y3_Blue_Swatch.jpg", "img/swatch/Y3_Green_Swatch.jpg", "img/swatch/Y3_Gray_Swatch.jpg"],
 ["Heather Red", "Ocean Blue", "Heather Green", "Heather Gray"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "yth");
 
 var youthShirtFour = new NewProduct("Youth Shirt Four", "Mens", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25,
 ["img/Y4_Maroon.png","img/Y4_Blue.png", "img/Y4_Purple.png", "img/Y4_Slate.png"],
@@ -111,7 +112,7 @@ var youthShirtFour = new NewProduct("Youth Shirt Four", "Mens", "Gastropub pork 
 ["img/swatch/Y4_Maroon_Swatch.jpg", "img/swatch/Y4_Blue_Swatch.jpg", "img/swatch/Y4_Purple_Swatch.jpg", "img/swatch/Y4_Slate_Swatch.jpg"],
 ["Maroon", "Ocean Blue", "Purple", "Slate"],
 ["Small", "Medium", "Large", "Extra Large"],
-["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"]);
+["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Fashion fit"], "yf");
 
 NewProduct.prototype.productdetail = function(){
   //loop to add all product thumbnail images
@@ -196,7 +197,7 @@ NewProduct.prototype.productdetail = function(){
 
  $("#shopGrid").append(
    "<div class='col-md-3'>" +
-   "<a href='#'><img class='shop' src='" + this.images[0] + "'></a>"
+   "<a id='" + this.click + "' href='#'><img class='shop' src='" + this.images[0] + "'></a>"
    + "<p class='title'>" + this.title + " $" + this.price +
    "</p>" + "</div>")
 }
@@ -228,6 +229,80 @@ $(document).ready(function() {
   youthShirtTwo.shopDisplay();
   youthShirtThree.shopDisplay();
   youthShirtFour.shopDisplay();
+
+  //show shirt detail
+    $("#wo").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      womanShirtOne.productdetail();
+    });
+    $("#wt").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      womanShirtTwo.productdetail();
+    });
+    $("#wth").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      womanShirtThree.productdetail();
+    });
+    $("#wf").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      womanShirtFour.productdetail();
+    });
+    $("#mo").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      menShirtOne.productdetail();
+    });
+    $("#mt").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      menShirtTwo.productdetail();
+    });
+    $("#mth").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      menShirtThree.productdetail();
+    });
+    $("#mf").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      menShirtFour.productdetail();
+    });
+    $("#yo").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      youthShirtOne.productdetail();
+    });
+    $("#yt").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      youthShirtTwo.productdetail();
+    });
+    $("#yf").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      youthShirtFour.productdetail();
+    });
+    $("#yth").click(function(event){
+      event.preventDefault();
+      $(".shopPage").hide();
+      $(".productDescription").show();
+      youthShirtThree.productdetail();
+    });
 
   $(".thumb0").click(function(event) {
     event.preventDefault();
@@ -284,108 +359,108 @@ $(document).ready(function() {
     $("#product5").show();
   });
   //swatch hover events
-$("#swatch0").hover(function(event) {
-  event.preventDefault();
-  $("#product2").hide();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product1").hide();
-  $("#product0").show();
-} , function(event) {
-  event.preventDefault();
-  $("#product2").hide();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product1").hide();
-  $("#product0").show();
-});
-$("#swatch1").hover(function(event) {
-  event.preventDefault();
-  $("#product0").hide();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product2").hide();
-  $("#product1").show();
-} , function(event) {
-  event.preventDefault();
-  $("#product0").show();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product2").hide();
-  $("#product1").hide();
-});
-$("#swatch2").hover(function(event) {
-  event.preventDefault();
-  $("#product1").hide();
-  $("#product2").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product0").hide();
-  $("#product2").show();
-} , function(event) {
-  event.preventDefault();
-  $("#product0").show();
-  $("#product2").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product1").hide();
-  $("#product2").hide();
-});
-$("#swatch3").hover(function(event) {
-  event.preventDefault();
-  $("#product1").hide();
-  $("#product2").hide();
-  $("#product3").hide();
-  $("#product5").hide();
-  $("#product0").hide();
-  $("#product3").show();
-} , function(event) {
-  event.preventDefault();
-  $("#product0").show();
-  $("#product2").hide();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product5").hide();
-  $("#product1").hide();
-});
-$("#swatch4").hover(function(event) {
-  event.preventDefault();
-  $("#product1").hide();
-  $("#product2").hide();
-  $("#product3").hide();
-  $("#product5").hide();
-  $("#product0").hide();
-  $("#product4").show();
-} , function(event) {
-  event.preventDefault();
-  $("#product0").show();
-  $("#product3").hide();
-  $("#product1").hide();
-  $("#product5").hide();
-  $("#product2").hide();
-  $("#product4").hide();
-});
-$("#swatch5").hover(function(event) {
-  event.preventDefault();
-  $("#product0").hide();
-  $("#product2").hide();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product1").hide();
-  $("#product5").show();
-} , function(event) {
-  event.preventDefault();
-  $("#product0").show();
-  $("#product3").hide();
-  $("#product4").hide();
-  $("#product1").hide();
-  $("#product6").hide();
-  $("#product5").hide();
-});
+  $("#swatch0").hover(function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product0").show();
+  } , function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product0").show();
+  });
+  $("#swatch1").hover(function(event) {
+    event.preventDefault();
+    $("#product0").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product2").hide();
+    $("#product1").show();
+  } , function(event) {
+    event.preventDefault();
+    $("#product0").show();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product2").hide();
+    $("#product1").hide();
+  });
+  $("#swatch2").hover(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product2").show();
+  } , function(event) {
+    event.preventDefault();
+    $("#product0").show();
+    $("#product2").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product2").hide();
+  });
+  $("#swatch3").hover(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product3").show();
+  } , function(event) {
+    event.preventDefault();
+    $("#product0").show();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+  });
+  $("#swatch4").hover(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product5").hide();
+    $("#product0").hide();
+    $("#product4").show();
+  } , function(event) {
+    event.preventDefault();
+    $("#product0").show();
+    $("#product3").hide();
+    $("#product1").hide();
+    $("#product5").hide();
+    $("#product2").hide();
+    $("#product4").hide();
+  });
+  $("#swatch5").hover(function(event) {
+    event.preventDefault();
+    $("#product0").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product1").hide();
+    $("#product5").show();
+  } , function(event) {
+    event.preventDefault();
+    $("#product0").show();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product1").hide();
+    $("#product6").hide();
+    $("#product5").hide();
+  });
 
   $("#userInput").submit(function(event){
     event.preventDefault();
@@ -484,4 +559,5 @@ $("#swatch5").hover(function(event) {
     $(".productDescription").hide();
     $(".checkout").hide();
   });
+
 });
