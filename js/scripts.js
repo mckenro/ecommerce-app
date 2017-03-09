@@ -4,7 +4,7 @@ var total = 0;
 var ship = 0;
 var taxCalc = 0;
 var cartCounter = 0;
-
+localStorage.setItem(total,ship,taxCalc,cartCounter);
 function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes){
  this.title = title;
  this.category = category;
@@ -292,18 +292,23 @@ $("#swatch5").hover(function(event) {
     $("#purchase").hide();
     $(".cartItems").hide();
   });
+  $("#addToCart").click(function(event){
+    event.preventDefault();
+    womanShirtOne.calculatePrice();
+    womanShirtOne.shipping();
+    womanShirtOne.tax();
+  });
+  // $("#showCart").click(function(event){
+  //   event.preventDefault();
+  //   $(product-detail.html).hide();
+  //   $(checkout.html).show();
+  // });
 
-  womanShirtOne.calculatePrice();
-
-  womanShirtOne.shipping();
-
-  womanShirtOne.tax();
 
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
   $("#grandTotal").text("Total: $" + totalFix);
-  console.log(cartCounter);
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
     var discount = (totalWithTax * .2);
