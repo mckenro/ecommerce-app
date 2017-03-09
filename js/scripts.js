@@ -201,7 +201,7 @@ NewProduct.prototype.productdetail = function(){
 
  $("#shopGrid").append(
    "<div class='col-md-3'>" +
-   "<a href='#'><img class='shop' src=" + this.images + "></a>"
+   "<a href='#'><img class='shop' src='" + this.images[0] + "'></a>"
    + "<p class='title'>" + this.title + " $" + this.price +
    "</p>" + "</div>")
 }
@@ -219,18 +219,19 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
-  // womanShirtOne.productdetail();
-  // womanShirtTwo.productdetail();
-  // womanShirtThree.productdetail();
-  // womanShirtFour.productdetail();
-  //menShirtOne.productdetail();
-  //menShirtTwo.productdetail();
-  //menShirtThree.productdetail();
-  //menShirtFour.productdetail();
-  //youthShirtOne.productdetail();
-  //youthShirtTwo.productdetail();
-  //youthShirtThree.productdetail();
-  youthShirtFour.productdetail();
+  womanShirtOne.shopDisplay();
+  womanShirtTwo.shopDisplay();
+  womanShirtThree.shopDisplay();
+  womanShirtFour.shopDisplay();
+  menShirtOne.shopDisplay();
+  menShirtTwo.shopDisplay();
+  menShirtThree.shopDisplay();
+  menShirtFour.shopDisplay();
+  youthShirtOne.shopDisplay();
+  youthShirtTwo.shopDisplay();
+  youthShirtThree.shopDisplay();
+  youthShirtFour.shopDisplay();
+
 
 
   $(".thumb0").click(function(event) {
@@ -429,11 +430,6 @@ $("#swatch5").hover(function(event) {
   //   $(checkout.html).show();
   // });
 
-
-
-
-  //womanShirtOne.shopInfo();
-  womanShirtOne.shopDisplay();
 
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
