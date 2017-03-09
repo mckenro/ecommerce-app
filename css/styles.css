@@ -6,7 +6,7 @@
 
 body {
   padding-top: 50px;
-  background: rgb(248,248,248);
+  background: rgb(248, 248, 248);
 }
 
 /*The browbar is under the title and over the pictures on the homepage*/
@@ -36,13 +36,16 @@ body {
 .display-1 {
   font-size: 120px;
 }
+
 /* These next three only affect homepage images*/
 .imgHome img{
   width:100%;
 }
+
 a {
   color: white;
 }
+
 a hover {
   color: blue;
 }
@@ -52,17 +55,19 @@ a hover {
   border:2px solid black;
   padding:20px;
   margin:10px;/*margin only works on row as whole*/
-
 }
-/*body, html {
-margin: 0 -10px 0 -10px;
-padding: 0;
-color: #37474F;
-}*/
 
-.thumb, .thumb1, .thumb2, .thumb3, .thumb4 {
-  padding-left:30px;
-  margin-top: 20px;
+#swatch0, #swatch1, #swatch2, #swatch3, #swatch4, #swatch5 {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.thumb0, .thumb1, .thumb2, .thumb3, .thumb4, .thumb5 {
+  margin-left:12px;
+  margin-top: 12px;
+  border: 2px solid white;
+  background: white;
 }
 
 img:first {
@@ -78,49 +83,80 @@ h1 {
   background-color: green;
 }
 #cartCount{
-  background-color: red;
+  background-color: #d50000;
   color: white;
 }
 /*Product Thumbnail Gallery */
-#product1 {
-  background: url(../img/dolman_sample.png) no-repeat center center fixed;
+#product0 {
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  /*margin-right: -80px;*/
   height: 100vh;
   width: 100%;
 }
 
-#product2 {
-  background: url(../img/dolman_sample_blue.png) no-repeat center center fixed;
+#product1 {
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  /*margin-right: -80px;*/
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+#product2 {
+  background: no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
   height: 100vh;
   width: 100%;
   display: none;
 }
 
 #product3 {
-  background: url(../img/dolman_sample_red.png) no-repeat center center fixed;
+  background: no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  /*margin-right: -80px;*/
   height: 100vh;
   width: 100%;
   display: none;
 }
 
+#product4 {
+  background: no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+#product5 {
+  background: no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+#thumbnail-area {
+  position: absolute;
+}
+
+/* cart styling */
 #emailDiscount{
   margin: 10px 30%;
 }
 #cartTitle{
   border-bottom: 2px solid blue;
 }
+
 .emptyCart{
   text-align: center;
   margin: 50px 150px;
 }
+
 #cartSymbol{
   width:40px;
   float:right;
@@ -135,55 +171,71 @@ h1 {
   width:240px;
   position:fixed;
   border: 2px solid black;
+  float:right;
 }
+
 #priceCalculator h2{
   background-color: lightblue;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   padding: 10px 25px;
 }
+
 #priceCalculator p{
   margin:30px 5px;
 }
+
 #emailDiscount h3{
   color: red;
 }
+
 /*Billing info*/
 #billingInfo{
   margin-top: 40px;
 }
+
 #addressInfo{
   margin-top: 40px;
 }
+
 #creditCardInfo{
   margin-top: 40px;
 }
+
 #userInput h3{
   border-bottom: 2px solid blue;
 }
+
 .hideUserInput{
+  position: relative;
   display:none;
 }
+
 .userConformation{
   display: none;
 }
+
 #purchase{
   margin:0 40%;
   display:none;
 }
+
 .cartItems{
   text-align: center;
 }
+
 .orderStyle{
   text-decoration: none;
   list-style-type: none;
   font-size: 30px;
   margin-left: 60px;
 }
+
 .priceSheet{
   margin: 15px;
   font-weight: bold;
 }
+
 .thankYou{
   display: none;
   text-align: center;

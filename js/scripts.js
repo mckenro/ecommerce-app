@@ -1,17 +1,62 @@
 //backend
+
 var total = 0;
 var ship = 0;
 var taxCalc = 0;
 var cartCounter = 0;
- function NewProduct(title, category, description, price, images){
-   this.title = title;
-   this.category = category;
-   this.description = description;
-   this.price = price;
-   this.images = [];
- }
-var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
-var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 20, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+
+function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes, propertiesList){
+ this.title = title;
+ this.category = category;
+ this.description = description;
+ this.price = price;
+ this.images = images;
+ this.thumbnails = thumbnails;
+ this.swatches = swatches;
+ this.colors = colors;
+ this.sizes = sizes;
+ this.propertiesList = propertiesList;
+}
+
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+
+NewProduct.prototype.productdetail = function(){
+
+  //loop to add all product thumbnail images
+  for (var i = 0; i< this.thumbnails.length; i++) {
+    $("#thumbnail-area").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+  };
+
+  //loop to add all product images
+  for (var i = 0; i< this.images.length; i++) {
+    $("#product-image-large").append("<div id='product" + i + "' style='background-image:url(" + this.images[i] + ");'>");
+  };
+
+  //loop to add all product color swatch images
+  for (var i = 0; i< this.swatches.length; i++) {
+    $("#swatch-area").append("<img id=" + "'swatch" + i + "'" + " " + "src=" + this.swatches[i] + "></img>");
+  };
+
+  $("h1.product-title").append(this.title);
+
+  $("h2.product-price").append("$" + this.price.toFixed(2));
+
+  $("p.product-description").append(this.description);
+
+  for (var i = 0; i< this.colors.length; i++) {
+    $("#selColor").append("<option " + "value=" + this.colors[i] + "class=" + '"product-color">' + this.colors[i] + "</option>");
+  };
+
+  for (var i = 0; i< this.sizes.length; i++) {
+    $("#selSize").append("<option " + "class=" + '"product-size">' + this.sizes[i] + "</option>");
+  };
+
+  for (var i = 0; i< this.sizes.length; i++) {
+    $("#product-properties").append("<li " + "class=" + '"product-property">' + this.propertiesList[i] + "</li>");
+  };
+
+}
+
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
    this.names = names;
    this.address = address;
@@ -27,6 +72,7 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
    this.expire = expire;
    this.cvc = cvc;
  }
+
  NewProduct.prototype.calculatePrice = function(){
    $("#purchase").show();
    $(".emptyCart").hide();
@@ -54,6 +100,7 @@ var manShirtOne = new NewProduct("Man Shirt One", "Man's", "Single-origin coffee
    };
  }
 
+
  NewProduct.prototype.shopInfo = function() {
  $(".title").append( this.title + " $" + this.price);
  }
@@ -78,11 +125,26 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
+
+//  var colorSelection = $("#selColor").val();
+
+  womanShirtOne.productdetail();
+  $(".thumb0").click(function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product0").show();
+  });
   $(".thumb1").click(function(event) {
     event.preventDefault();
     $("#product2").hide();
     $("#product3").hide();
     $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
     $("#product1").show();
   });
   $(".thumb2").click(function(event) {
@@ -90,6 +152,8 @@ $(document).ready(function() {
     $("#product1").hide();
     $("#product3").hide();
     $("#product4").hide();
+    $("#product5").hide();
+    $("#product0").hide();
     $("#product2").show();
   });
   $(".thumb3").click(function(event) {
@@ -97,6 +161,8 @@ $(document).ready(function() {
     $("#product1").hide();
     $("#product2").hide();
     $("#product4").hide();
+    $("#product5").hide();
+    $("#product6").hide();
     $("#product3").show();
   });
   $(".thumb4").click(function(event) {
@@ -104,8 +170,123 @@ $(document).ready(function() {
     $("#product1").hide();
     $("#product2").hide();
     $("#product3").hide();
+    $("#product5").hide();
+    $("#product0").hide();
     $("#product4").show();
   });
+  $(".thumb5").click(function(event) {
+    event.preventDefault();
+    $("#product1").hide();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product0").hide();
+    $("#product5").show();
+  });
+  //swatch hover events
+$("#swatch0").hover(function(event) {
+  event.preventDefault();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+  $("#product0").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+  $("#product0").show();
+});
+$("#swatch1").hover(function(event) {
+  event.preventDefault();
+  $("#product0").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product2").hide();
+  $("#product1").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product2").hide();
+  $("#product1").hide();
+});
+$("#swatch2").hover(function(event) {
+  event.preventDefault();
+  $("#product1").hide();
+  $("#product2").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product0").hide();
+  $("#product2").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product2").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+  $("#product2").hide();
+});
+$("#swatch3").hover(function(event) {
+  event.preventDefault();
+  $("#product1").hide();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product5").hide();
+  $("#product0").hide();
+  $("#product3").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product5").hide();
+  $("#product1").hide();
+});
+$("#swatch4").hover(function(event) {
+  event.preventDefault();
+  $("#product1").hide();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product5").hide();
+  $("#product0").hide();
+  $("#product4").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product3").hide();
+  $("#product1").hide();
+  $("#product5").hide();
+  $("#product2").hide();
+  $("#product4").hide();
+});
+$("#swatch5").hover(function(event) {
+  event.preventDefault();
+  $("#product0").hide();
+  $("#product2").hide();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product1").hide();
+  $("#product5").show();
+} , function(event) {
+  event.preventDefault();
+  $("#product0").show();
+  $("#product3").hide();
+  $("#product4").hide();
+  $("#product1").hide();
+  $("#product6").hide();
+  $("#product5").hide();
+});
+
   $("#userInput").submit(function(event){
     event.preventDefault();
     var name = $("#name").val();
@@ -122,7 +303,6 @@ $(document).ready(function() {
     var expire = $("#expire").val();
     var cvc = $("#cvc").val();
     var customer = new CustomerInfo(name, address, city, state, zip, phone, shipAddress, shipCity, shipState, shipZip, cardNumber, expire, cvc);
-    console.log(customer);
     customer.makethingsappear();
   })
   $("#purchase").click(function(event){
@@ -134,14 +314,17 @@ $(document).ready(function() {
     $(".cartItems").hide();
   });
 
+<<<<<<< HEAD
 
   womanShirtOne.shopInfo();
   womanShirtOne.shopDisplay();
+=======
+>>>>>>> 15cbb74164306eafded826f851747d311b8bacbc
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
   $("#grandTotal").text("Total: $" + totalFix);
-  console.log(cartCounter);
+
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
     var discount = (totalWithTax * .2);

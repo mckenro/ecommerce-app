@@ -6,13 +6,13 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Product Page</title>
+    <title>Product Detail Page</title>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="/index.html" class="navbar-brand">T-Shirt's and Stuff</a>
+          <a href="/index.html" class="navbar-brand">Tee Shirt's and Stuff</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
@@ -23,92 +23,59 @@
             </ul>
           </li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Photo Share</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
-        <button class="btn btn-primary navbar-btn navbar-right">Cart</button>
+        <button class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
       </div>
-
-<div class="container-fluid responsive">
-
-      <div class="row">
+    </nav> <!-- end nav bar -->
+<div class="container-fluid responsive" id="contentArea">
+     <div class="row">
         <div class="col-md-7">
-          <div id="product1">
+          <!-- content is added below from prototype -->
+          <div class="container" id="product-image-large">
             <div class="row">
               <div class="col-md-1">
-                <img class="thumb" src="http://placehold.it/70x70"></img>
-                <img class="thumb2" src="http://placehold.it/70x70"></img>
-                <img class="thumb3" src="http://placehold.it/70x70"></img>
+                <div id="thumbnail-area">
+                </div>
               </div>
             </div>
           </div>
-          <div id="product2">
-            <div class="row">
-              <div class="col-md-1">
-                <img class="thumb1" src="http://placehold.it/70x70"></img>
-                <img class="thumb2" src="http://placehold.it/70x70"></img>
-                <img class="thumb3" src="http://placehold.it/70x70"></img>
-              </div>
-            </div>
-          </div>
-          <div id="product3">
-            <div class="row">
-              <div class="col-md-1">
-                <img class="thumb1" src="http://placehold.it/70x70"></img>
-                <img class="thumb2" src="http://placehold.it/70x70"></img>
-                <img class="thumb3" src="http://placehold.it/70x70"></img>
-              </div>
-            </div>
-          </div>
-          <div id="product4">
-            <div class="row">
-              <div class="col-md-1">
-                <img class="thumb1" src="http://placehold.it/70x70"></img>
-                <img class="thumb2" src="http://placehold.it/70x70"></img>
-                <img class="thumb3" src="http://placehold.it/70x70"></img>
-              </div>
-            </div>
-          </div>
-        </div><!--close first column-->
+        </div>
 
         <div class="col-md-5">
           <div id="shop">
-            <h1 class="product-title">Smarty Pants</h1>
+            <h1 class="product-title"></h1>
+            <h2 class="product-price"></h2>
             <div class="form-group">
               <label for="selColor">Choose Color:</label>
               <select class="form-control" id="selColor">
-                <option>Tri-Black</option>
-                <option>Tri-Navy</option>
               </select>
             </div>
             <div class="form-group">
               <label for="selSize">Choose Size:</label>
               <select class="form-control" id="selSize">
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-                <option>Extra Large</option>
               </select>
             </div>
             <button class="btn btn-success">Add To Cart</button>
             <h3>Description</h3>
-            <p>Smarty Pants… and begs, and plays fetch. Smarty is the dog that will do your homework- before he eats it. But how can you stay mad when he gives you those puppy dog eyes from behind his faker glasses?</p>
-            <p>Enjoy everything you love about the fit, feel and durability of a vintage T-shirt, in a brand new tee.</p>
-            <ul>
-              <li>Blended fabric construction gives a heathered look</li>
-              <li>Polyester retains shape and elasticity, Cotton lends both comfort and durability</li>
-              <li>Durable rib neckband</li>
-              <li>Loose, flowy fit</li>
+            <p class="product-description"></p>
+            <ul id="product-properties">
             </ul>
-            <p>Colors: Tri-Black, Tri-Navy</p>
+            <div class="row">
+              <div id="swatchGroup">
+                <h4>Color Choices:</h4>
+                <div id="swatch-area">
+                </div>
+              </div>
+            </div>
           </div><!--close shop-->
         </div><!--close second column-->
 
       </div><!--close row -->
     </div><!--close container -->
-    <div class="footer">
+<!--    <div class="footer">
       <h2>This is a footer</h2>
-    </div>
+    </div> -->
   </body>
-</html>
+  </html>
