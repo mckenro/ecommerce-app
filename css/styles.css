@@ -45,6 +45,7 @@ body {
 a {
   color: white;
 }
+
 a hover {
   color: blue;
 }
@@ -54,9 +55,7 @@ a hover {
   border:2px solid black;
   padding:20px;
   margin:10px;/*margin only works on row as whole*/
-
 }
-
 
 #swatch0, #swatch1, #swatch2, #swatch3, #swatch4, #swatch5 {
   width: 40px;
@@ -84,7 +83,7 @@ h1 {
   background-color: green;
 }
 #cartCount{
-  background-color: red;
+  background-color: #d50000;
   color: white;
 }
 /*Product Thumbnail Gallery */
@@ -152,10 +151,12 @@ h1 {
 #cartTitle{
   border-bottom: 2px solid blue;
 }
+
 .emptyCart{
   text-align: center;
   margin: 50px 150px;
 }
+
 #cartSymbol{
   width:40px;
   float:right;
@@ -172,55 +173,69 @@ h1 {
   border: 2px solid black;
   float:right;
 }
+
 #priceCalculator h2{
   background-color: lightblue;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   padding: 10px 25px;
 }
+
 #priceCalculator p{
   margin:30px 5px;
 }
+
 #emailDiscount h3{
   color: red;
 }
+
 /*Billing info*/
 #billingInfo{
   margin-top: 40px;
 }
+
 #addressInfo{
   margin-top: 40px;
 }
+
 #creditCardInfo{
   margin-top: 40px;
 }
+
 #userInput h3{
   border-bottom: 2px solid blue;
 }
+
 .hideUserInput{
   position: relative;
   display:none;
 }
+
 .userConformation{
   display: none;
 }
+
 #purchase{
   margin:0 40%;
   display:none;
 }
+
 .cartItems{
   text-align: center;
 }
+
 .orderStyle{
   text-decoration: none;
   list-style-type: none;
   font-size: 30px;
   margin-left: 60px;
 }
+
 .priceSheet{
   margin: 15px;
   font-weight: bold;
 }
+
 .thankYou{
   display: none;
   text-align: center;

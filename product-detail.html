@@ -12,7 +12,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="/index.html" class="navbar-brand">T-Shirts and Stuff</a>
+          <a href="/index.html" class="navbar-brand">Tee Shirt's and Stuff</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
@@ -23,11 +23,10 @@
             </ul>
           </li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Photo Share</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
-        <button class="btn btn-primary navbar-btn navbar-right">Cart</button>
+        <button class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
       </div>
     </nav> <!-- end nav bar -->
 <div class="container-fluid responsive" id="contentArea">
@@ -61,11 +60,7 @@
             <button class="btn btn-success">Add To Cart</button>
             <h3>Description</h3>
             <p class="product-description"></p>
-            <ul>
-              <li>Blended fabric construction gives a heathered look</li>
-              <li>Polyester retains shape and elasticity, Cotton lends both comfort and durability</li>
-              <li>Durable rib neckband</li>
-              <li>Loose, flowy fit</li>
+            <ul id="product-properties">
             </ul>
             <div class="row">
               <div id="swatchGroup">
