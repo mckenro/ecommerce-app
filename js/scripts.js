@@ -196,7 +196,7 @@ NewProduct.prototype.productdetail = function(){
 
  $("#shopGrid").append(
    "<div class='col-md-3'>" +
-   "<a href='#'><img class='shop' src=" + this.images + "></a>"
+   "<a href='#'><img class='shop' src='" + this.images[0] + "'></a>"
    + "<p class='title'>" + this.title + " $" + this.price +
    "</p>" + "</div>")
 }
@@ -216,7 +216,18 @@ CustomerInfo.prototype.makethingsappear = function(){
 //product detail page thumbnail gallery
 $(document).ready(function() {
 
-
+  womanShirtOne.shopDisplay();
+  womanShirtTwo.shopDisplay();
+  womanShirtThree.shopDisplay();
+  womanShirtFour.shopDisplay();
+  menShirtOne.shopDisplay();
+  menShirtTwo.shopDisplay();
+  menShirtThree.shopDisplay();
+  menShirtFour.shopDisplay();
+  youthShirtOne.shopDisplay();
+  youthShirtTwo.shopDisplay();
+  youthShirtThree.shopDisplay();
+  youthShirtFour.shopDisplay();
 
   $(".thumb0").click(function(event) {
     event.preventDefault();
@@ -408,6 +419,7 @@ $("#swatch5").hover(function(event) {
     womanShirtOne.shipping();
     womanShirtOne.tax();
   });
+
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
