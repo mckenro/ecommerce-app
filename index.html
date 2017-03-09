@@ -11,7 +11,7 @@
 
     <!--Nav Bar-->
     <div class="showNavagation">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <a id="homeButton" href="index.html"  class="navbar-brand">Tee Shirt's and Stuff</a>
@@ -19,9 +19,10 @@
           <ul class="nav navbar-nav">
             <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li>Men's</li>
-                <li>Women's</li>
-                <li>Kid's</li>
+                <li class="manClick"><a href='#'>Men's</a></li>
+                <li class="womanClick"><a href='#'>Women's</a></li>
+                <li class="kidClick"><a href='#'>Kid's</a></li>
+                <li class="everyoneClick"><a href='#'>Everyone</a></li>
               </ul>
             </li>
             <li><a href="#">About</a></li>
@@ -29,16 +30,16 @@
           </ul>
           <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
           <button id="cartButton" class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
-        </div>
+        </div><!--end container -->
       </nav>
-    </div>
+    </div><!--end showNavigation -->
 
     <!--START PAGE-->
   <div class="startPage">
     <div class="row">
       <div id="women">
         <div class="col-lg-6">
-          <h1 id="womanTitle"><a href="#">Women's</a></h1>
+          <h1 id="womanTitle"><a class="womanClick" href="#">Women's</a></h1>
           <div class="imgHome">
             <img src="img/Women.png">
           </div>
@@ -47,7 +48,7 @@
       <div id="men">
         <div class="col-lg-6">
           <div class="imgHome">
-            <h1 id="manTitle"><a href="#">Men's</a></h1>
+            <h1 id="manTitle"><a class="manClick" href="#">Men's</a></h1>
             <div class="imgHome">
               <img class="imgHome" src="img/Men.png">
             </div>
@@ -59,7 +60,7 @@
     <div class="row">
       <div id="kids">
         <div class="col-lg-6">
-            <h1 id="kidTitle"><a href="#">Kids</a></h1>
+            <h1 id="kidTitle"><a class="kidClick" href="#">Kids</a></h1>
             <div class="imgHome">
               <img class="imgHome" src="img/Kids.png">
             </div>
@@ -74,31 +75,6 @@
         </div>
      </div>
    </div>
-
-  <!--Nav Bar-->
-  <div class="showNavagation">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a id="homeButton" href="index.html"  class="navbar-brand">Tee Shirt's and Stuff</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="manClick"><a href='#'>Men's</a></li>
-              <li class="womanClick"><a href='#'>Women's</a></li>
-              <li class="kidClick"><a href='#'>Kid's</a></li>
-              <li class="everyoneClick"><a href='#'>Everyone</a></li>
-            </ul>
-          </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
-        <button id="cartButton" class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
-      </div><!--end container -->
-    </nav>
-  </div><!--end showNavigation -->
   </div><!-- end .startPage -->
 
   <!--Shop Page-->
