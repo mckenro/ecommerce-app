@@ -7,7 +7,6 @@ var cartCounter = 0;
 
 
 function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes, propertiesList){
-
  this.title = title;
  this.category = category;
  this.description = description;
@@ -85,6 +84,7 @@ NewProduct.prototype.productdetail = function(){
    $("#cartCount").text(cartCounter);
    return total += this.price
  }
+
  NewProduct.prototype.tax = function(){
     taxCalc = total * .096;
     taxDisplay = taxCalc.toFixed(2);
@@ -102,6 +102,18 @@ NewProduct.prototype.productdetail = function(){
      ship =  0;
    };
  }
+
+
+ NewProduct.prototype.shopInfo = function() {
+ $(".title").append( this.title + " $" + this.price);
+ }
+
+ NewProduct.prototype.shopDisplay = function() {
+ $(".row").append(
+   "<div class='col-md-3'>" +
+   "<a href='#'><img class="shop" src=" + this.images"></a>"
+   + "<p class='title'></p>" + "</div>")
+}
 
 CustomerInfo.prototype.makethingsappear = function(){
   $("#userInput").hide();
@@ -317,10 +329,16 @@ $("#swatch5").hover(function(event) {
   // });
 
 
+
+
+  womanShirtOne.shopInfo();
+  womanShirtOne.shopDisplay();
+
   $("#itemTotal").append(total);
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
   $("#grandTotal").text("Total: $" + totalFix);
+
 
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
