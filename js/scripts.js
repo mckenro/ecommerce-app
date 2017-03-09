@@ -4,8 +4,10 @@ var total = 0;
 var ship = 0;
 var taxCalc = 0;
 var cartCounter = 0;
-localStorage.setItem(total,ship,taxCalc,cartCounter);
-function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes){
+
+
+function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes, propertiesList){
+
  this.title = title;
  this.category = category;
  this.description = description;
@@ -15,9 +17,12 @@ function NewProduct(title, category, description, price, images, thumbnails, swa
  this.swatches = swatches;
  this.colors = colors;
  this.sizes = sizes;
+ this.propertiesList = propertiesList;
 }
 
-var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"]);
+
+var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/dolman_sample_gray_thumb.jpg", "img/dolman_sample_blue_thumb.jpg", "img/dolman_sample_red_thumb.jpg"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"], ["Heather Gray", "Ocean Blue", "Deep Red"], ["Small", "Medium", "Large", "Extra Large"], ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"]);
+
 
 NewProduct.prototype.productdetail = function(){
 
@@ -43,12 +48,17 @@ NewProduct.prototype.productdetail = function(){
   $("p.product-description").append(this.description);
 
   for (var i = 0; i< this.colors.length; i++) {
-    $("#selColor").append("<option " + "class=" + '"product-color">' + this.colors[i] + "</option>");
+    $("#selColor").append("<option " + "value=" + this.colors[i] + "class=" + '"product-color">' + this.colors[i] + "</option>");
   };
 
   for (var i = 0; i< this.sizes.length; i++) {
-    $("#selSize").append("<option " + "class=" + '"product-color">' + this.sizes[i] + "</option>");
+    $("#selSize").append("<option " + "class=" + '"product-size">' + this.sizes[i] + "</option>");
   };
+
+  for (var i = 0; i< this.sizes.length; i++) {
+    $("#product-properties").append("<li " + "class=" + '"product-property">' + this.propertiesList[i] + "</li>");
+  };
+
 }
 
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
@@ -106,6 +116,9 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
+
+//  var colorSelection = $("#selColor").val();
+
   womanShirtOne.productdetail();
   $(".thumb0").click(function(event) {
     event.preventDefault();
@@ -281,7 +294,6 @@ $("#swatch5").hover(function(event) {
     var expire = $("#expire").val();
     var cvc = $("#cvc").val();
     var customer = new CustomerInfo(name, address, city, state, zip, phone, shipAddress, shipCity, shipState, shipZip, cardNumber, expire, cvc);
-    console.log(customer);
     customer.makethingsappear();
   })
   $("#purchase").click(function(event){
@@ -309,6 +321,7 @@ $("#swatch5").hover(function(event) {
   var totalWithTax = total + ship + taxCalc;
   var totalFix = totalWithTax.toFixed(2);
   $("#grandTotal").text("Total: $" + totalFix);
+
   $("#emailDiscount").submit(function(event){
     event.preventDefault();
     var discount = (totalWithTax * .2);

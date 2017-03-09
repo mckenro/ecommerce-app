@@ -8,6 +8,8 @@
     <script src="js/scripts.js"></script>
     <title>Product Page</title><html>
   <body>
+    <!--START PAGE-->
+  <div class="startPage"
     <div class="row" id=titleBar>
       <div class="col-lg-12">
         <h1 class="display-1">T-shirts and stuff</h1>
@@ -45,6 +47,292 @@
         <a href="#"><h1 id="everyoneTitle">Everyone</h1></a>
         <img src="img/Everyone.png">
       </div>
+    </div>
+  </div>
+  <!--Nav Bar-->
+  <div class="showNavagation">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html" class="navbar-brand">Tee Shirt's and Stuff</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>Men's</li>
+              <li>Women's</li>
+              <li>Kid's</li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
+        <button class="btn btn-primary navbar-btn navbar-right" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span id="cartCount" class="badge"></span></button>
+      </div>
+    </nav>
+  </div>
+  <!--Shop Page-->
+  <div class=shopPage>
+    <div class="container fluid-responsive">
+      <div class="row" id="shopRow1">
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 1 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img  class="shop" src="img/shop200.png">
+            <p class="description">Design 2 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 3 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+      </div>
+
+      <div class="row" id="shopRow2">
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 4 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 5 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 6 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+      </div>
+
+      <div class="row" id="shopRow3">
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 7 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 8 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 9 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+      </div>
+      <div class="row" id="shopRow4">
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 10 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 11 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+        <div class="col-md-3">
+          <img class="shop" src="img/shop200.png">
+            <p class="description">Design 12 T-shirt</p>
+            <p class="price">15.00</p>
+        </div>
+      </div><!--close row -->
+    </div>
+    <!--Product Detail-->
+    <div class=productionDescription>
+      <div class="container-fluid responsive" id="contentArea">
+           <div class="row">
+              <div class="col-md-7">
+                <!-- content is added below from prototype -->
+                <div class="container" id="product-image-large">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <div id="thumbnail-area">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <div id="shop">
+                  <h1 class="product-title"></h1>
+                  <h2 class="product-price"></h2>
+                  <div class="form-group">
+                    <label for="selColor">Choose Color:</label>
+                    <select class="form-control" id="selColor">
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="selSize">Choose Size:</label>
+                    <select class="form-control" id="selSize">
+                    </select>
+                  </div>
+                  <button id ="addToCart" class="btn btn-success">Add To Cart</button>
+                  <h3>Description</h3>
+                  <p class="product-description"></p>
+                  <ul id="product-properties">
+                  </ul>
+                  <div class="row">
+                    <div id="swatchGroup">
+                      <h4>Color Choices:</h4>
+                      <div id="swatch-area">
+                      </div>
+                    </div>
+                  </div>
+                </div><!--close shop-->
+              </div><!--close second column-->
+
+            </div><!--close row -->
+          </div><!--close container -->
+    </div>
+  </div>
+    <!--checkout page-->
+    <div class="checkout">
+      <div class="container">
+        <h1 id="cartTitle">SHOPPING CART<img id="cartSymbol" src="img/shopping-cart.png"></h1>
+      <!--user conformation displays here-->
+      <div class="userConformation">
+        <h3>Payment Information:</h3>
+        <ul id="payInfo"></ul>
+        <h3>Shipping Info:</h3>
+        <ul id="shipInfo"></ul>
+        <button id="thanks" type="submit">Finish order</button>
+      </div>
+      <div class="thankYou">
+        <h1>Thank you for shopping with Tee Shirts and Stuff!</h1>
+        <h3>Your awesome new products will arrive in 3-5 business days</h3>
+      </div>
+        <!--emailDiscount-->
+        <form id="emailDiscount">
+          <h3>Sign up for our mailing list and receive 20% off your first order!</h3>
+          <div class="form-group">
+            <label for="email"></label>
+            <input id="email" class="form-control" type="email" placeholder="Email" required>
+          </div>
+          <button type="submit">Add E-mail</button>
+        </form>
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="emptyCart">
+              <h3>Your cart is currently empty</h3>
+            </div>
+            <div>
+              <ul class="cartItems"><ul>
+            </div>
+            <button id="purchase" type=submit>Purchase</button>
+          </div>
+          <!--displays price-->
+          <div class="col-sm-3">
+            <table class="table">
+              <div id="priceCalculator">
+                <div class="table-header">
+                  <h2>Order Summary</h2>
+                </div>
+                <div class="priceSheet">
+                  <p id="itemTotal">Items Total: $</p>
+                  <p id="shippingTotal">Shipping: $</p>
+                  <p id="tax">Tax: $</p>
+                  <p id="grandTotal"></p>
+                  <p id="discountTotal"></p>
+                </div>
+              </div>
+            </table>
+          </div>
+        </div>
+      <!--Takes user info and payment-->
+      <form id="userInput">
+        <div class="hideUserInput">
+      <div class="container">
+        <div class="col-sm-3">
+          <h3>Billing Address</h3>
+        </div>
+        <div class="col-sm-5">
+          <div id="billingInfo">
+            <div class="form-group">
+              <label for="name"></label>
+              <input id="name" class="form-control" type="text" placeholder="Name on Card" required>
+            </div>
+              <div class="form-group">
+                <label for="address"></label>
+                <input id="address" class="form-control" type="text" placeholder="Address" required>
+              </div>
+              <div class="form-group">
+                <label for="city"></label>
+                <input id="city" class="form-control" type="text" placeholder="City" required>
+              </div>
+              <div class="form-group">
+                <label for="state"></label>
+                <input id="state" class="form-control" type="text" placeholder="State" required>
+              </div>
+              <div class="form-group">
+                <label for="zip"></label>
+                <input id="zip" class="form-control" type="text" placeholder="Zip Code" required>
+              </div>
+              <div class="form-group">
+                <label for="phone"></label>
+                <input id="phone" class="form-control" type="text" placeholder="Phone Number" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="col-sm-3">
+            <h3>Shipping Address</h3>
+          </div>
+          <div class="col-sm-5">
+            <div id="addressInfo">
+                <div class="form-group">
+                  <label for="shipAddress"></label>
+                  <input id="shipAddress" class="form-control" type="text" placeholder="Address" required>
+                </div>
+                <div class="form-group">
+                  <label for="shipCity"></label>
+                  <input id="shipCity" class="form-control" type="text" placeholder="City" required>
+                </div>
+                <div class="form-group">
+                  <label for="shipState"></label>
+                  <input id="shipState" class="form-control" type="text" placeholder="State" required>
+                </div>
+                <div class="form-group">
+                  <label for="shipZip"></label>
+                  <input id="shipZip" class="form-control" type="text" placeholder="Zip Code" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+          <div class="col-sm-3">
+            <h3>Credit Card Info</h3>
+          </div>
+            <div class="col-sm-5">
+              <div id="creditCardInfo">
+                <div class="form-group">
+                  <label for="cardNumber"></label>
+                  <input id="cardNumber" class="form-control" type="text" placeholder="Credit Card Number" required>
+                </div>
+                  <div class="form-group">
+                    <label for="expire"></label>
+                    <input id="expire" class="form-control" type="text" placeholder="Expiration Date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="cvc"></label>
+                    <input id="cvc" class="form-control" type="text" placeholder="CVC" required>
+                  </div>
+                  <button type="submit">Confirm Purchase</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
     </div>
   </body>
 </html>
