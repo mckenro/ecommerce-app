@@ -192,11 +192,6 @@ NewProduct.prototype.productdetail = function(){
    };
  }
 
-
- /*NewProduct.prototype.shopInfo = function() {
- $(".title").append( this.title + " $" + this.price);
- }*/
-
  NewProduct.prototype.shopDisplay = function() {
 
  $("#shopGrid").append(
@@ -205,6 +200,7 @@ NewProduct.prototype.productdetail = function(){
    + "<p class='title'>" + this.title + " $" + this.price +
    "</p>" + "</div>")
 }
+
 
 CustomerInfo.prototype.makethingsappear = function(){
   $("#userInput").hide();
@@ -451,5 +447,27 @@ $("#swatch5").hover(function(event) {
     $("#purchase").hide();
     $(".thankYou").show();
 
+  });
+  //Nav bar commands
+  $("#cartButton").click(function(event){
+    event.preventDefault();
+    $(".startPage").hide();
+    $(".shopPage").hide();
+    $(".productDescription").hide();
+    $(".checkout").show();
+  });
+  $("#HomeButton").click(function(event){
+    event.preventDefault();
+    $(".startPage").show();
+    $(".shopPage").hide();
+    $(".productDescription").hide();
+    $(".checkout").hide();
+  });
+  $("#everyoneClick").click(function(event){
+    event.preventDefault();
+    $(".startPage").hide();
+    $(".shopPage").show();
+    $(".productDescription").hide();
+    $(".checkout").hide();
   });
 });

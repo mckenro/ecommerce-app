@@ -1,3 +1,16 @@
+/*hiding all the "Pages" to make it buttons interactive*/
+.showNavagation{
+
+}
+.shopPage{
+  display:none;
+}
+.productDescription{
+  display:none;
+}
+.checkout{
+  display:none;
+}
 #shop {
   margin-right: 40px;
   margin-bottom: 60px;
@@ -11,22 +24,19 @@ body {
 
 /*The browbar is under the title and over the pictures on the homepage*/
 #titleBar {
-
+  background-image: url(img/landscape.jpeg);
 }
 #browBar {
   background-color: black;
 }
-#browBar, #titleBar{
-  width: 100%;
-  text-align:center;
-  padding-bottom: 1px;
-}
+
 /*This is for text on photos on the homepage*/
 #womanTitle, #manTitle, #kidTitle, #everyoneTitle{
   position: absolute;
-  margin: 30px 125px;
-  font-size: 120px;
+  /*margin: 30px 125px;*/
+  font-size: 100px;
   text-shadow: 2px 2px black;
+  float:right;
 }
 /*This is for text on photos on the homepage*/
 #women, #men, #kids, #everyone, #browText {
@@ -38,8 +48,13 @@ body {
 }
 
 /* These next three only affect homepage images*/
-.imgHome img{
+.imgHome{
+  background: no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
   width:100%;
+  margin:0;
+  padding:0;
 }
 
 a {
