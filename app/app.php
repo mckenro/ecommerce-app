@@ -12,7 +12,19 @@
 
     $app->get("/", function() use ($app) {
         return $app['twig']->render('home.html.twig');
-});
+    });
+
+    $app->get("/shop", function() use ($app) {
+        return $app['twig']->render('shop.html.twig');
+    });
+
+    $app->get("/product-multi", function() use ($app) {
+        return $app['twig']->render('product-multi.html.twig');
+    });
+
+    $app->get("/checkout", function() use ($app) {
+        return $app['twig']->render('checkout.html.twig');
+    });
 
 
     return $app;

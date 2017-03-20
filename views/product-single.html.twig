@@ -1,0 +1,53 @@
+{% include 'header.html.twig' %}
+
+<div class=productDescription>
+  <div class="container-fluid responsive" id="contentArea">
+       <div class="row">
+          <div class="col-md-7">
+            <!-- content is added below from prototype -->
+            <div class="container" id="product-image-large">
+              <div class="row">
+                <div class="col-md-1">
+                  <div id="thumbnail-area">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div id="shop">
+              <h1 class="product-title"></h1>
+              <h2 class="product-price"></h2>
+              <div class="form-group">
+                <label for="selColor">Choose Color:</label>
+                <select class="form-control" id="selColor">
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="selSize">Choose Size:</label>
+                <select class="form-control" id="selSize">
+                </select>
+              </div>
+              <button id ="addToCart" class="btn btn-success">Add To Cart</button>
+              <h3>Description</h3>
+              <p class="product-description"></p>
+              <ul id="product-properties">
+              </ul>
+              <div class="row">
+                <div id="swatchGroup">
+                  <h4>Color Choices:</h4>
+                  <div id="swatch-area">
+                  </div>
+                </div>
+              </div>
+            </div><!--close shop-->
+          </div><!--close second column-->
+
+        </div><!--close row -->
+      </div><!--close container -->
+</div>
+
+<!-- add footer with twig below here -->
+</body>
+</html>
